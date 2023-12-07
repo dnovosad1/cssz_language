@@ -1,0 +1,2446 @@
+{
+  "zdol": {
+    "titleStarobni": "Žádost o starobní důchod",
+    "titlePozustalostni": "Žádost o pozůstalostní důchod",
+    "titleInvalidni": "Žádost o invalidní důchod",
+    "title": "Žádost o důchod",
+    "errors": "Žádná chyba | Chyba | Chyby | Chyb",
+    "periods": "Žádná doba | Doba | Doby | Dob",
+    "common": {
+      "view": "Zobrazit",
+      "print": "Tisknout",
+      "delete": "Odstranit",
+      "close": "Zavřít",
+      "continue": "Pokračovat",
+      "oldAgePension": "Starobní důchod",
+      "disabilityPension": "Invalidní důchod",
+      "probatePension": "Pozůstalostní důchod",
+      "stateNotFound": "Žádný stát nebyl nalezen.",
+      "addState": "Přidat stát",
+      "add": "Přidat",
+      "saveChanges": "Uložit změny",
+      "save": "Uložit",
+      "yes": "Ano",
+      "no": "Ne",
+      "doNotKnow": "Nevím",
+      "pick": "Vyberte",
+      "dateFrom": "Datum od",
+      "dateTo": "Datum do",
+      "moreInfo": `"Další" "informace"`,
+      "employer": "Zaměstnavatel",
+      "note": "Poznámka",
+      "document": "Doklad",
+      "application": "Žádost",
+      "declaration": "Prohlášení",
+      "from": "Od",
+      "to": "Do",
+      "edit": "Upravit",
+      "remove": "Smazat",
+      "send": "Odeslat",
+      "csszWebsites": "stránkách ČSSZ",
+      "back": "Zpět",
+      "startDate": "Datum zahájení",
+      "endDate": "Datum ukončení",
+    },
+    "address": {
+      "buildingName": "Název budovy",
+      "street": "Ulice",
+      "streetHint": `"Ulici" "není" "nutné" "vyplňovat", "pokud" "obec" "nemá" "uliční"
+      "systém."`,
+      "buildingNumber": "Číslo popisné",
+      "buildingNumberHint": `"Číslo" "popisné" "je" "v" "obci" "unikátní", "píše" "se" "před" "lomítkem"
+      "a" "bude" "obvykle" "vyšší" "než" "číslo" "orientační."`,
+      "orientationNumber": "Číslo orientační",
+      "orientationNumberHint": `"Číslo" "orientační" "je" "obvykle" "to" "nižší", "píše" "se" "za"
+      "lomítkem."`,
+      "region": "Region",
+      "municipality": "Obec",
+      "municipalityArea": "Část obce",
+      "municipalityAreaHint": `"Část" "obce" "není" "třeba" "vyplňovat", "pokud" "ji" "obec" "nemá."`,
+      "cityArea": "Městská část",
+      "cityAreaHint": `"Městskou" "část" "není" "třeba" "vyplňovat", "pokud" "ji" "obec" "nemá."`,
+      "permanentAddressForeign": "Trvalá adresa v zahraničí",
+      "permanentAddressCz": "Trvalá adresa v České republice",
+      "wantToProvidePermanentAddressInCz": `"Chci" "uvést" "i" "trvalou" "adresu" "v" "České" "republice"`,
+      "deliveryAddress": "Doručovací adresa",
+      "deliveryAddressCz": "Doručovací adresa v České republice",
+      "deliveryAddressForeign": "Doručovací adresa v zahraničí",
+      "deliveryAddressSameAsPermanent": `"Doručovací" "adresa" "je" "shodná" "s" "trvalou"`,
+      "deliveryAddressSameAsPermanentInCz": `"Doručovací" "adresa" "je" "shodná" "s" "trvalou" "v" "České"
+      "republice"`,
+      "deliveryAddressSameAsPermanentForeign": `"Doručovací" "adresa" "je" "shodná" "s" "trvalou" "v" "zahraničí"`,
+
+      "residenceForAtLeast270Days": `"Kde" "pobýváte" "po" "dobu" "alespoň" "270" "dnů" "v" "kalendářním" "roce"?`,
+      "residenceForAtLeast270DaysHint": `"Tento" "údaj" "je" "důležitý" "pro" "výplatu" "důchodu." "V" "případě",
+      "že" "pobýváte" "v" "kalendářním" "roce" "alespoň" "270" "dní" "mimo"
+      "území" "České" "republiky", "vyplácí" "se" "důchod" "na" "základě"
+      "potvrzení" "o" "žití."`,
+      "pscHint": `"Může" "být" "uvedeno" "pouze" "PSČ" "pošty", "která" "Vám" "může"
+      "vyplácet" "důchod."`,
+      "state": "Stát",
+    },
+    "introduction": {
+      "title": "Následující otázky pomohou určit, zda můžete prostřednictvím {'@'}ČSSZ{'@'} podat žádost o důchod online.",
+      "insuredInCz":
+      "Byl/a jste důchodově pojištěn/a pouze v České republice?",
+      "livingInCz": "Žijete na území České republiky?",
+      "livingInCzHint": `"Místo", "kde" "trvale" "žijete", "přičemž" "se" "vychází" "z" "faktického"
+      "stavu", "kde" "máte" "centrum" "svých" "zájmů" "-" "rodinu", "práci",
+      "majetek." "To" "znamená", "že" "se" "vždy" "nemusí" "shodovat" "s" "evidenčním"
+      "trvalým" "pobytem."`,
+      "currentlyLivingIn": "Kde v současnosti žijete?",
+      "hadPensionInCurrentState":
+      "Byl/a jste důchodově pojištěn ve státě, ve kterém v současnosti žijete?",
+      "intendedPensionCountries": `"Ze" "kterých" "států" "máte" "v" "úmyslu" "požádat" "o" "důchod"? "(Můžete"
+      "vybrat" "více" "států)"`,
+      "intendedPensionCountriesHint": `"Pokud" "v" "seznamu" "států" "nevidíte" "některý" "stát", "ve" "kterém" "jste"
+      "získal" "dobu" "pojištění", "jedná" "se" "o" "stát" "nesmluvní" "ciziny." "Pro"
+      "podání" "žádosti" "o" "důchod" "ze" "států" "nesmluvní" "ciziny"
+      "kontaktujte" "nositele" "pojištění" "v" "daném" "státě."`,
+      "osmlstHint": `"Pro" "podání" "žádosti" "o" "důchod" "z" "Albánie", "Austrálie", "Běloruska", "Kanady",
+      "Izraele", "Indie", "Japonska", "Korejské" "republiky", "Moldavské" "republiky",
+      "Ruské" "federace", "Tuniska", "Spojených" "států" "amerických", "Mongolska" "nebo"
+      "Syrské" "arabské" "republiky" "je" "potřeba" "sepsat" "dohodnutý" "bilaterální"
+      "formulář", "který" "je" "dostupný" "na"
+      "<a" "href=""{link}" "target=""_blank"">"
+      "ePortálu"
+      "</a>."`,
+      "canContinue": "Je možné pokračovat v sepisování žádosti.",
+      "contactSocialInsuranceAbroad": `"Pro" "uplatnění" "žádosti" "o" "důchod" "z" "ČR" "je" "potřeba" "se" "obrátit" "na"
+      "příslušnou" "instituci" "sociálního" "pojištění" "ve" "státě", "ve" "kterém" "v"
+      "současnosti" "žijete."`,
+      "contactSocialInsuranceAbroadHint": `"Podle" "koordinačních" "nařízení" "EU" "a" "bilaterálních" "smluv" "o" "sociálním"
+      "zabezpečení", "kterými" "je" "Česká" "republika" "vázána", "se" "žádost" "o" "důchod" "z"
+      "České" "republiky" "podává" "prostřednictvím" "instituce" "státu" "bydliště",
+      "jestliže" "žadatel" "je" "nebo" "byl" "rovněž" "v" "tomto" "státě" "důchodově"
+      "pojištěn."`,
+    },
+    "opening": {
+      "title": `"Žádost" "o" "důchod" "online" "je" "rozdělena" "do" "několika" "oddílů." "První"
+      "oddíl" "Základní informace žádosti" "obsahuje" "Vaše" "identifikační"
+      "údaje" "a" "další" "základní" "údaje" "související" "s" "žádostí." "Další" "oddíly"
+      "jsou" "určeny" "k" "získání" "informací" "nezbytných" "pro" "posouzení" "Vaší"
+      "žádosti" "o" "důchod."`,
+      "titleOldAge": `"Žádost" "o" "důchod" "online" "je" "rozdělena" "do" "několika" "oddílů." "První"
+      "oddíl" "Základní informace žádosti" "obsahuje" "Vaše" "identifikační"
+      "údaje" "a" "další" "základní" "údaje" "související" "s" "žádostí." "Druhý" "oddíl"
+      "Informativní vyhodnocení nároku na starobní důchod" "Vás" "bude"
+      "informovat" "o" "tom", "zda" "splňujete" "podmínky" "pro" "nárok" "na" "starobní"
+      "důchod." "Další" "oddíly" "jsou" "určeny" "k" "získání" "informací" "nezbytných"
+      "pro" "posouzení" "Vaší" "žádosti" "o" "důchod."`,
+      "hint": `"Nápověda" "k" "žádosti" "o" "důchod"?`,
+      "hintDetail": `"V" "žádosti" "o" "důchod" "je" "potřeba" "uvést" "všechny" "údaje", "které" "jsou"
+      "důležité" "pro" "posouzení" "nároku" "a" "stanovení" "výše" "důchodu." "Žádost"
+      "je" "rozdělena" "do" "více" "tematických" "oddílů." "Oddíly" "můžete" "dle"
+      "libosti" "přeskakovat."`,
+      "hintDetailOldAge": `"Při" "vyplnění" "některých" "položek" "může" "dojít" "k" "přepočtu"
+      "(navýšení)" "informativní" "výše" "důchodu", "proto" "je" "lišta"
+      "průběžného" "vyhodnocení" "k" "dispozici" "neustále" "ve" "vrchní" "části"
+      "žádosti."`,
+      "yellowSections": `"Oddíly", "které" "jste" "zatím" "nezobrazil/a", "jsou" "označeny" "žlutě."`,
+      "redSections": `"Oddíly", "které" "jsou" "nedostatečně" "nebo" "chybně" "vyplněny", "jsou"
+      "označeny" "červeně."`,
+      "greenSections": `"Oddíly", "které" "jsou" "dostatečně" "vyplněny", "jsou" "označeny" "zeleně."`,
+      "notRequiredSections": `"Oddíly" "bez" "označení" "jsou" "informativní" "nebo" "nepovinné."`,
+      "requiredSections": `"Položky" "žádosti" "označené" "hvězdičkou" "*" "jsou" "pro" "dokončení" "žádosti"
+      "povinné."`,
+    },
+    "declarationAndPayment": {
+      "title": "Přiznání a výplata důchodu",
+      "titleForeign": "Žádost o důchod z České republiky",
+      "fromWhen": "Od kdy požadujete přiznání starobního důchodu?",
+      "properApplicationHint": `"Dle" "zadaného" "data" "přiznání" "žádáte" "o" "řádný" "starobní" "důchod."`,
+      "invalidApplicationHint": `"Dle" "zadaného" "data" "přiznání" "žádáte" "o" "předčasný" "starobní" "důchod" "před"
+      "datem" "sepsání" "žádosti." "Pokud" "budete" "pokračovat" "s" "tímto" "datem" "přiznání", "bude" "to" "znamenat" "zamítnutí" "žádosti."`,
+      "prematureApplicationHint": `"Dle" "zadaného" "data" "přiznání" "žádáte" "o" "předčasný" "starobní" "důchod."`,
+      "applicationAfterClaimHint": `"Dle" "zadaného" "data" "přiznání" "žádáte" "o" "starobní" "důchod" "po" "nároku."`,
+      "deniedApplicationHint": `"Dle" "zadaného" "data" "přiznání" "žádáte" "o" "starobní" "důchod" "před" "splněním"
+      "podmínek" "pro" "nárok." "Pokud" "budete" "pokračovat" "s" "tímto" "datem" "přiznání", "bude" "to" "znamenat" "zamítnutí" "žádosti."`,
+      "fromWhenDisability":
+      "Od kdy požadujete přiznání invalidního důchodu?",
+      "hint": `"Podmínkou" "nároku" "na" "starobní" "důchod" "je" "získání" "potřebné" "doby"
+      "pojištění" "a" "dosažení" "stanoveného" "věku."
+      "<br" "/>"
+      "Žádáte-li" "o" "starobní" "důchod" "(řádný" "starobní" "důchod)" "a" "datum"
+      "přiznání" "odpovídá" "datu" "vzniku" "nároku" "na" "starobní" "důchod", "vyberte"
+      "možnost" „"Od" "vzniku" "nároku"“"." "Pokud" "datum" "přiznání" "odpovídá"
+      "pozdějšímu" "datu", "zvolte" "konkrétní" "Vámi" "požadované" "datum."
+      "Žádáte-li" "o" "starobní" "důchod" "před" "dosažením" "důchodového" "věku"
+      "(předčasný" "starobní" "důchod)", "zvolte" "konkrétní" "Vámi" "požadované"
+      "datum" "jeho" "přiznání." "Tímto" "datem" "však" "může" "být" "nejdříve" "datum"
+      "uplatnění" "nároku" "na" "tento" "důchod." "Informace" "o" "Vašem" "nároku" "na"
+      "starobní" "důchod" "lze" "zjistit" "v" "části" "Vyhodnocení nároku na
+      "důchod"".
+      "<br" "/>"
+      "Další" "informace" "naleznete" "na"
+      "<a"
+      "href=""{link}"
+      "target=""_blank"
+      ">"
+      "stránkách" "ČSSZ"
+      "</a>"
+      "."`,
+      "hintDisability": `
+      "<p>"
+      "Žádáte-li" "o" "přiznání" "o" "důchod" "od" "data" "uznání"
+      "invalidity", "vyberte" "možnost" "od vzniku nároku""."
+      "</p>"
+      "<p>"
+      "Jste-li" "v" "pracovní" "neschopnosti" "a" "jsou" "Vám"
+      "vypláceny" "nemocenské" "dávky", "můžete" "požadovat",
+      "aby" "Vám" "byl" "invalidní" "důchod" "přiznán" "ode" "dne"
+      "ukončení" "výplaty" "nemocenských" "dávek" "výběrem"
+      "možnosti" "od skončení výplaty nemocenských dávek
+      ".
+      "</p>"
+      "<p>"
+      "Pokud" "Vám" "byl" "v" "minulosti" "invalidní" "důchod" "odňat"
+      "a" "žádáte" "o" "přiznání" "nového" "invalidního" "důchodu",
+      "můžete" "zvolit" "možnost" "od odnětí invalidního
+      "důchodu"".
+      "</p>"
+      "<p>"
+      "Chcete-li" "žádat" "o" "invalidní" "důchod" "od"
+      "konkrétního" "data", "vyberte" "možnost" "od jiného
+      "data"".
+      "</p>"`,
+      "requiredDeclarationDate": "Požadované datum přiznání",
+      "requiredDeclarationDateDisability":
+      "Vyberte datum, od kterého chcete žádat invalidní důchod",
+      "paymentStartDate": "Od kdy požadujete výplatu starobního důchodu?",
+      "paymentStartDateDisability":
+      "Od kdy požadujete výplatu invalidního důchodu?",
+      "paymentStartDateHint": `"Žádáte-li" "výplatu" "starobního" "důchodu" "od" "stejného" "data", "jako" "je"
+      "datum" "přiznání" "starobního" "důchodu", "vyberte" "možnost" “"Od" "přiznání"
+      "starobního" "důchodu"“"."
+      "<br" "/>"
+      "Žádáte-li" "výplatu" "starobního" "důchodu" "od" "data", "které" "je" "odlišné"
+      "od" "data" "přiznání" "důchodu", "a" "toto" "datum" "nastane" "v" "období" "do" "4"
+      "měsíců" "ode" "dne" "sepsání" "žádosti" "o" "důchod", "vyberte" "možnost" “"Od"
+      "jiného" "data" "než" "je" "datum" "přiznání"“"."
+      "<br" "/>"
+      "Žádáte-li" "výplatu" "starobního" "důchodu" "od" "data", "které" "je" "odlišné"
+      "od" "data" "přiznání" "důchodu", "a" "toto" "datum" "však" "nastane" "více" "než" "4"
+      "měsíce" "ode" "dne" "sepsání" "žádosti", "vyberte" "možnost" “"Bez" "výplaty"“"."`,
+      "paymentDate": `"Datum" "výplaty"`,
+      "paymentDateDisability": `"Vyberte" "datum", "od" "kterého" "požadujete" "výplatu" "invalidního"
+      "důchodu"`,
+      "notApplyingFromCz": `"Neuplatňujete" "žádost" "o" "důchod" "z" "České" "republiky." "Pokud" "si"
+      "přejete" "požádat" "i" "o" "důchod" "z" "České" "republiky", "upravte" "úvodní"
+      "dotazník" "žádosti."`,
+    },
+    "probateApplication": {
+      "title": "Úvod žádosti",
+      "whichPension": "O jaký druh důchodu žádáte?",
+      "requirements": `"V" "případě", "že" "podmínky" "nároku" "na" "přiznání" "pozůstalostního" "důchodu"
+      "budou" "splněny", "bude" "tento" "důchod" "přiznán" "ke" "dni" "vzniku" "nároku", "tedy"
+      "ke" "dni" "úmrtí" "zemřelého/zemřelé."`,
+      "paymentInfo": `"Výplata" "pozůstalostního" "důchodu" "náleží" "od" "vzniku" "nároku", "maximálně"
+      "však" "5" "let" "zpětně" "od" "data" "uplatnění" "žádosti" "o" "tento" "důchod."`,
+    },
+    "stateIdentification": {
+      "title": "Žádost o důchod ze zahraničí",
+      "titleDescription": `"ČSSZ" "neposkytuje" "informace" "ohledně" "zahraničních" "důchodových" "systémů"
+      "a" "možných" "nárocích" "klientů", "v" "případě" "potřeby" "se" "prosím" "obraťte" "na"
+      "tamní" "instituci" "sociálního" "pojištění." "ČSSZ" "zprostředkuje" "předání"
+      "uplatněné" "žádosti" "včetně" "všech" "získaných" "dokumentů" "druhé" "straně", "tj."
+      "zahraniční" "instituci" "sociálního" "pojištění", "která" "posoudí" "nárok"
+      "zadatele" "sama" "podle" "svých" "předpisů."`,
+      "subtitle": `"Identifikace" "států" "s" "dobami" "pojištění"`,
+      "provideStates": `"Uveďte" "všechny" "státy", "ve" "kterých" "byl" "zemřelý/zemřelá" "pojištěn/a."
+      "Pro" "přidání" "dalšího" "státu" "stiskněte" "Přidat stát""."`,
+      "provideStatesHint": `"Pokud" "Vám" "není" "umožněno" "přidat" "stát", "ve" "kterém" "zemřelý/zemřelá"
+      "získal/a" "dobu" "pojištění", "jedná" "se" "o" "stát" "nesmluvní" "ciziny." "Pro"
+      "podání" "žádosti" "o" "důchod" "ze" "států" "nesmluvní" "ciziny" "kontaktujte"
+      "nositele" "pojištění" "v" "daném" "státě."`,
+      "provideInsuredStates": `"Uveďte" "všechny" "státy" "v" "zahraničí", "ve" "kterých" "jste" "byl/a"
+      "pojištěn/a." "Pro" "přidání" "dalšího" "státu" "stiskněte" "Přidat stát""."`,
+      "provideInsuredStatesHint": `"Pokud" "Vám" "není" "umožněno" "přidat" "stát", "ve" "kterém" "jste" "získal/a"
+      "dobu" "pojištění", "jedná" "se" "o" "stát" "nesmluvní" "ciziny." "Pro" "podání"
+      "žádosti" "o" "důchod" "ze" "států" "nesmluvní" "ciziny" "kontaktujte" "nositele"
+      "pojištění" "v" "daném" "státě."`,
+      "editStatesHint": `"Níže" "můžete" "státy" "přidat", "upravit" "nebo" "smazat."`,
+      "personalIdentificationNumber": "Osobní identifikační číslo",
+      "personalIdentificationNumberProbateHint": `"Jedná" "se" "o" "číslo" "důchodového" "pojištění", "které"
+      "bylo" "přiřazeno" "zemřelému/zemřelé" "v" "uvedeném"
+      "státě." "Toto" "číslo" "je" "důležité" "pro" "identifikaci"
+      "příslušnou" "zahraniční" "institucí."`,
+      "personalIdentificationNumberHint": `"Jedná" "se" "o" "Vaše" "číslo" "důchodového" "pojištění",
+      "které" "Vám" "bylo" "přiřazeno" "v" "uvedeném" "státě." "Toto"
+      "číslo" "je" "důležité" "pro" "Vaši" "identifikaci"
+      "příslušnou" "zahraniční" "institucí."`,
+      "deceasedPersonalIdentificationNumber":
+      "Osobní identifikační číslo zemřelého/zemřelé",
+      "requestingPensionDeclaration": `"Žádám" "o" "přiznání" "důchodu"`,
+      "requiredPensionStartDate": "Od kdy požadujete důchod?",
+      "empty": `"V" "přehledu" "nejsou" "uvedeny" "žádné" "státy."`,
+      "pickStateProbate": `"Vyberte" "příslušný" "stát", "ve" "kterém" "zemřelý/zemřelá" "pracoval/a", "resp."
+      "byl/a" "duchodově" "pojištěn/a" "a" "vyplňte" "datum" "začátku" "a" "konce" "této"
+      "doby." "Pokud" "ve" "stejném" "státě" "vykonával/a" "po" "sobě" "dvě" "různé" "činnosti"
+      "stejného" "druhu" "(např." "dvě" "různá" "zaměstnání)", "vyplňte" "tyto" "doby"
+      "zvlášť."`,
+      "pickState": `"Vyberte" "příslušný" "stát", "ve" "kterém" "jste" "pracoval/a", "resp." "byl/a"
+      "důchodově" "pojištěn/a" "a" "vyplňte" "údaje" "potřebné" "pro" "žádost" "o" "důchod."`,
+      "editState": "Upravit stát",
+      "deleteState": "Smazat stát",
+      "deleteStateConfirmation": "Opravdu chcete smazat vybraný stát?",
+      "addState": "Přidat stát",
+      "pensionDeclarationFromSelectedCountry": `"Požadujete" "přiznání" "důchodu" "ze" "zvoleného" "státu"?`,
+      "disabilityPensionHInt": `"Žádost" "o" "invalidní" "důchod" "uplatněná" "v" "jednom"
+      "členském" "státě" "se" "v" "souladu" "s" "nařízením" "EP" "a"
+      "Rady" "č." "987/2009" "považuje" "automaticky" "i" "za"
+      "žádost" "o" "invalidní" "důchod" "v" "druhém" "členském"
+      "státě", "kde" "byl" "žadatel" "rovněž" "důchodově"
+      "pojištěn." "Z" "toho" "důvodu" "je" "přednastavena"
+      "volba" „"ano", "žádám" "o" "přiznání" "důchodu"“ "u" "Vámi"
+      "zvoleného" "státu", "ve" "kterém" "jste" "získal/a"
+      "dobu" "důchodového" "pojištění." "V" "případě", "že"
+      "již" "invalidní" "důchod" "z" "uvedeného" "státu"
+      "pobíráte" "nebo" "jste" "o" "něj" "již" "zažádal/a" "jinou"
+      "žádostí", "proveďte" "změnu" "přednastavené" "volby"
+      "na" „"ne"“"."`,
+      "probatePensionHint": `"Žádost" "o" "pozůstalostní" "důchod" "uplatněná" "v"
+      "jednom" "členském" "státě" "se" "v" "souladu" "s"
+      "nařízením" "EP" "a" "Rady" "č." "987/2009" "považuje"
+      "automaticky" "i" "za" "žádost" "o" "pozůstalostní"
+      "důchod" "v" "druhém" "členském" "státě", "kde" "byla"
+      "zemřelá" "osoba" "důchodově" "pojištěna." "Z" "toho"
+      "důvodu" "je" "přednastavena" "volba" „"ano", "žádám" "o"
+      "přiznání" "důchodu"“ "u" "Vámi" "zvoleného" "státu", "ve"
+      "kterém" "zemřelá" "osoba" "získala" "dobu"
+      "důchodového" "pojištění." "V" "případě", "že" "již"
+      "pozůstalostní" "důchod" "z" "uvedeného" "státu" "po"
+      "této" "osobě" "pobíráte" "nebo" "jste" "o" "něj" "již"
+      "zažádal/a" "jinou" "žádostí", "proveďte" "změnu"
+      "přednastavené" "volby" "na" „"ne"“"."`,
+      "oldAgePensionHint": `"Volbu" "Ne" "vyberte", "pokud" "o" "přiznání" "důchodu" "ze"
+      "zvoleného" "státu" "nežádáte", "neboť" "Vám" "již" "byl"
+      "tento" "důchod" "přiznán", "případně" "jste" "již" "o" "něj"
+      "požádal/a", "nebo" "jestliže" "zatím" "nesplňujete"
+      "podmínky" "nároku" "na" "důchod" "v" "uvedeném" "státě."
+      "Odklad" "zvolte", "pokud" "jste" "sice" "již" "splnil/a"
+      "podmínky" "nároku" "na" "důchod" "v" "uvedeném" "státě", "ale"
+      "nyní" "(případně" "v" "době" "dalších" "4" "měsíců)" "o" "něj"
+      "nežádáte." "Pokud" "budete" "později" "požadovat"
+      "přiznání" "odloženého" "starobního" "důchodu", "budete"
+      "muset" "uplatnit" "novou" "žádost."`,
+      "declaration": `"Prohlašuji", "že" "jsem" "byl/a" "poučen/a" "o"
+      "tom", "že" "pro" "přiznání" "důchodu" "ze"
+      "státu", "vůči" "kterému" "jsem" "požádal/a" "o"
+      "odklad" "přiznání" "důchodu", "bude" "nutné"
+      "podat" "novou" "žádost."`,
+      "declarationHint": `"Jelikož" "žádáte" "o" "odklad", "je" "nutné",
+      "abyste" "zaškrtnul/a" "políčko" "s"
+      "prohlášením" "o" "poučení" "o" "nutnosti"
+      "vyplňovat" "novou" "žádost."`,
+      "requiredPensionStateStartDate": `"Od" "kdy" "požadujete" "důchod" "ze" "zvoleného" "státu"?`,
+      "requiredPensionStateStartDateHint": `"Chcete-li", "aby" "Vám" "byl" "důchod" "přiznán" "v"
+      "okamžiku", "kdy" "jste" "splnil/a" "podmínky" "nároku"
+      "podle" "právních" "předpisů" "daného" "státu", "zaškrtněte"
+      "možnost" "od vzniku nároku""." "Pokud" "požadujete"
+      "datum" "přiznání" "důchodu" "dopředu" "o" "více" "než" "4"
+      "měsíce", "potom" "Vám" "doporučujeme" "o" "něj" "požádat" "až"
+      "později" "samostatnou" "žádostí."`,
+      "applyingFromGermany": `"Žádáte" "o" "důchod" "z" "Německa" "se" "snížením"?`,
+      "applyingFromGermanyHint": `"Pokud" "požadujete" "přiznání" "(řádného)" "starobního"
+      "důchodu" "z" "Německa" "od" "nejdřívějšího" "možného" "data",
+      "kdy" "podle" "německých" "právních" "předpisů" "nedochází"
+      "ke" "krácení" "výše" "důchodu" "z" "důvodu" "jeho" "předčasné"
+      "výplaty", "zaškrtněte" "políčko" „"Ne"“"." "Pokud"
+      "požadujete", "aby" "Vám" "byl" "přiznán" "německý"
+      "(předčasný)" "starobní" "důchod" "od" "nejdřívějšího"
+      "možného" "data" "s" "tím", "že" "výše" "takového" "důchodu"
+      "bude" "krácena" "podle" "německých" "právních" "předpisů" "z"
+      "důvodu" "předčasné" "výplaty", "zvolte" "možnost" „"Ano"".`,
+      "deceasedReceivedPensionFromSelectedCountry":
+      "Pobíral/a zemřelý/zemřelá důchod ze zvoleného státu?",
+    },
+    "paymentMethod": {
+      "title": "Způsob výplaty důchodu",
+      "provideBankAddress": `"Vyplňte" "co" "nejpřesněji" "adresu" "banky", "u" "níž" "je" "účet" "pro" "výplatu"
+      "důchodu" "veden."`,
+      "subtitle": "Výplata důchodu z České republiky",
+      "subtitleForeign": "Výplata důchodu ze zahraničí",
+      "provideInfoForeign": `"Doplňte" "informace" "o" "účtu" "pro" "výplatu" "zahraničního" "důchodu."`,
+      "howShouldPensionBePaidOut": "Jak Vám má být vyplácen český důchod?",
+      "howShouldPensionBePaidOutHint": `"Položku" "Na dosavadní účet" "vyberte" "pouze" "v" "případě",
+      "že" "Vám" {"@"}"ČSSZ"{"@"} "již" "vyplácí" "jiný" "druh" "důchodu."`,
+bankConnection: "Bankovní spojení",
+bankAccountNumber: "Číslo účtu",
+bankAccountNumberHint: `Uveďte správné a úplné číslo účtu a správný
+kód banky. @ČSSZ@ neodpovídá za škodu,
+jestliže splátka důchodu nebyla
+vyplacena/byla poukázána na účet cizí osoby
+v důsledku chybného čísla účtu vyplněného
+žadatelem. Důchod také nelze vyplácet na
+zřízený chráněný účet.`,
+relationToAccount: "Jaký je Váš vztah k účtu?",
+partnerPin: "Rodné číslo manžela/manželky",
+providePartnerPin: `Uveďte pro ověření rodné číslo manžela/manželky.`,
+attachingRequestForBankTransferPayment: `Přikládáte žádost o zařízení výplaty důchodu poukazem na
+účet?`,
+attachingRequestForBankTransferPaymentHint: `Je třeba přiložit podepsaný a bankou potvrzený sken
+dokumentu "Žádost o zařízení výplaty důchodu poukazem na
+účet manžela (manželky) v České republice".
+<br />
+Jde-li o účet v zahraničí, potřebujete tiskopis "Žádost
+osoby žijící mimo území České republiky o výplatu českého
+důchodu poukazem na účet". Všechny tiskopisy lze nalézt na
+<a
+href="{link}"
+target="_blank"
+>
+ePortále
+</a>. Pokud žádost o zařízení výplaty důchodu poukazem na účet
+nepřipojujete, uveďte důvod.`,
+attachingRequestForBankTransferPaymentHintForeign: `Jde-li o účet v zahraničí, potřebujete tiskopis "Žádost
+osoby žijící mimo území České republiky o výplatu českého
+důchodu poukazem na účet". Všechny tiskopisy lze nalézt na
+<a
+href="{link}"
+target="_blank"
+>
+ePortále
+</a>.
+<br />
+Pokud žádost o zařízení výplaty důchodu poukazem na účet
+nepřipojujete, uveďte důvod.`,
+attachSignedForm: `Přiložte v příloze podepsaný tiskopis "Žádost osoby žijící mimo
+území České republiky o výplatu českého duchodu poukazem na účet".
+Tiskopis je k dispozici na
+<a
+href="{link}"
+target="_blank"
+>
+ePortále
+</a>.`,
+application: "Žádost",
+provideReasonForNoAttachment: `Uveďte důvod nepřipojení žádosti o zařízení výplaty důchodu
+poukazem na účet.`,
+noAccount: `V evidenci {'@'}ČSSZ{'@'} nebyl nalezen žádný z Vašich účtů. Vyberte
+jinou možnost výplaty.`,
+accountsListDescription: `V evidenci @ČSSZ@ jsou evidovány účty uvedené v seznamu níže.
+Pokud ze seznamu vyberete jeden z účtů, bude Vám Český důchod na
+tento účet vyplácen. Pokud si nepřejete, aby Vám byl český
+důchod vyplácen na žádný z těchto účtů, vyberte jiný způsob
+výplaty.`,
+pensionDeliveryPlace: "Kam má být důchod doručen?",
+whichAccount: `Na který z dosavadních účtů Vám má být český důchod
+vyplácen?`,
+declarationOfCostsForCashPensionPayments: `Prohlašuji, že jsem si vědom povinnosti
+hradit náklady plátce důchodu za poukazy
+splátek důchodu vyplácených v hotovosti (§
+64 odst. 5 zákona č. 155/1995 Sb.).`,
+declarationOfChangeToCashPensionCosts: `Prohlašuji, že jsem si v případě změny
+způsobu výplaty důchodu na výplatu v
+hotovosti vědom povinnosti hradit náklady
+plátce důchodu za poukazy splátek důchodu
+vyplácených v hotovosti (§ 64 odst. 5 zákona
+č. 155/1995 Sb.).`,
+fromSep2023FeeIsReduced: `Od 1. 9. 2023 je cena tohoto poplatku 35 Kč. O
+tento poplatek je pak nižší vyplácená částka
+důchodu.`,
+declineToProvideForeignPensionAccount: `Nechci uvádět informace o účtu pro výplatu
+zahraničního důchodu.`,
+accountType: "Typ účtu",
+accountTypeHint: `Účet SEPA - účet je veden v bance, která je součástí
+projektu "jednotná oblast pro platby v eurech - Single Euro
+Payments Area".`,
+accountOwnerName: "Jméno majitele účtu",
+bankName: "Název banky",
+iban: "IBAN",
+ibanHint: `První dva znaky označují kód země, další dva
+znaky jsou číselné. Následuje 20 znaků pro kód
+banky a číslo účtu. Vyplňujte bez mezer.`,
+bicSwift: "BIC/SWIFT",
+whereShouldBePensionDelivered: "Kam má být důchod doručen?",
+},
+insurancePeriods: {
+title: "Přehled dob důchodového pojištění",
+titleForeign: "Přehled zhodnocených dob pojištění",
+subtitleForeign: `V této části jsou informace o Vašich dobách od Vašeho ukončení
+povinné školní docházky do doby žádosti o důchod. Informace jsou
+prvotně naplněny z evidence {'@'}ČSSZ{'@'}. Informace o dobách v
+zahraničí v evidenci {'@'}ČSSZ{'@'} nejsou, proto přidejte všechny vaše
+doby v zahraničí tlačítkem "Přidat zahraniční dobu". Níže můžete
+doby zkontrolovat, přidat další z České republiky nebo ze
+zahraničí, doplnit informace a provádět další akce. K prázdným
+intervalům je nutné přidat dobu.`,
+subtitleForeignHint: `Doby, které pochází z evidence {'@'}ČSSZ{'@'}, můžete nechat
+prověřit pomocí tlačítka "Prověřit dobu", musíte však uvést
+důvod k prověření. Zrušit prověření evidované doby je možno
+pomocí tlačítka "Zrušit žádost o prověření". K intervalům
+chybějících dob je třeba doplnit dobu.`,
+subtitle: `V této části jsou informace o Vašich dobách, které jsou v
+evidenci {'@'}ČSSZ{'@'}, od Vašeho ukončení povinné školní docházky do
+doby žádosti o důchod. Níže můžete doby zkontrolovat, přidat
+další doby, které v přehledu chybí, a případně doplnit další
+informace.`,
+subtitleHint: `Doby, které pochází z evidence {'@'}ČSSZ{'@'}, můžete nechat
+prověřit pomocí tlačítka "Prověřit dobu", musíte však uvést
+důvod k prověření. Zrušit prověření evidované doby je možno
+pomocí tlačítka "Zrušit žádost o prověření". Další dobu
+můžete přidat pomocí tlačítka "Přidat další dobu" nebo
+pomocí tlačítka "Přidat dobu" u prázdných intervalů. V
+případě přidání doby k prázdnému intervalu Vám bude
+předvyplněno datum začátku a konce doby dle prázdného
+intervalu. Pokud k prázdnému intervalu nechcete přidávat
+dobu, klikněte u něj na tlačítko "Uvedenou dobu
+nedokládám/nepožaduji".`,
+headerPeriodFrom: "Doba od",
+headerPeriodTo: "Doba do",
+periodType: "Druh doby",
+headerPeriodInfo: "Informace o době",
+empty: `V přehledu nejsou uvedeny žádné doby důchodového pojištění.`,
+noProvidedRequestedInsurancePeriods:
+"Nedokládám/nepožaduji žádnou dobu důchodového pojištění.",
+add: "Přidat dobu",
+addCz: "Přidat dobu z ČR",
+addAnother: "Přidat další dobu",
+addForeign: "Přidat zahraniční dobu",
+notRequesting: `Uvedenou dobu nedokládám/nepožaduji`,
+requesting: `Uvedenou dobu chci doložit`,
+requestingCz: "Uvedenou dobu chci doložit - doba z ČR",
+requestingForeign: "Uvedenou dobu chci doložit - zahraniční doba",
+editAdded: "Upravit přidanou dobu",
+edit: "Upravit dobu",
+editForeign: "Upravit zahraniční dobu",
+delete: "Smazat přidanou dobu",
+deleteConfirm: "Opravdu chcete smazat uvedenou dobu?",
+verify: "Prověřit dobu",
+editVerificationRequest: "Upravit žádost o prověření",
+cancelVerificationRequest: "Zrušit žádost o prověření",
+cancelVerificationRequestConfirm:
+"Opravdu chcete zrušit žádost o prověření?",
+dateFromHint: `Vyplňte přesné datum počátku doby ve formátu
+DD.MM.RRRR.`,
+dateToHint: `Pokud v "Doba trvá dosud." bude "ano", pak tato
+položka nebude editovatelná.
+Musí být pozdější než předchozí datum.`,
+stillPersists: `Doba trvá dosud.`,
+documentHint: `Do poznámek doplňte informace k době, případně
+přiložte doklady dokazující tuto dobu, pokud je
+to možné. Můžete doplnit více dokladů.`,
+documentHintLearning: `Doporučujeme přiložit sken výučního listu.
+Přiložení dokladů zjednoduší uznání doby.`,
+documentHintStudent: `Doporučujeme přiložit sken maturitního
+vysvědčení, výučního listu, indexu vysoké školy
+či diplomu (podle druhu studia). Přiložení
+dokladů zjednoduší uznání doby.`,
+documentHintOther: `Pro zrychlení uznání doby doporučujeme přiložit
+vojenskou knížku, propouštěcí list nebo jiný
+doklad. Můžete doplnit více dokladů.`,
+documentHintInsurance: `Pro zrychlení uznání doby doporučujeme přiložit
+doklady dokazující Vaše zaměstnání. Můžete
+doplnit více dokladů.`,
+documentHintOsvc: `Pro zrychlení uznání doby doporučujeme přiložit
+doklady dokazující, že jste byl samostatně
+výdělečně činný. Můžete doplnit více dokladů.`,
+schoolName: "Název školy",
+employerName: "Název zaměstnavatele",
+evaluation: {
+title: "Údaje pro upřesnění informativního výpočtu důchodu",
+subtitle: `Zadání následujících údajů není povinné pro podání žádosti o
+důchod, avšak jejich zadání ovlivní kvalitu odhadu Vašeho
+starobního důchodu.`,
+assessmentBase: "Vyměřovací základ",
+assessmentBaseHint: `Zde si můžete doplnit vyměřovací základ za vkládanou
+dobu (§ 16 (3) zákona č. 155/1995 Sb.). Vyměřovací
+základ lze zhruba odhadnout jako sumu hrubé mzdy
+nebo platu za dané období. Pokud vyměřovací základ
+nezadáte, ovlivní to kvalitu odhadu výše Vašeho
+starobního důchodu.`,
+excludedDays: "Vyloučené dny",
+excludedDaysHint: `Zde můžete vyplnit počet dní, které se Vám mají pro
+odhad výše starobního důchodu v dané době považovat
+za vyloučené (§ 16 (4) zákona č. 155/1995 Sb.). Může
+jít např. o dny dočasné pracovní neschopnosti,
+kterou jste si nezpůsobil/a úmyslně, doba karantény,
+doba před porodem (max. 8 týdnů) či doba, kdy Vám
+byly vypláceny mzdové nároky v nižší částce, než
+náležely.`,
+},
+addForeignSubtitle: `Uveďte informace o Vašich dobách pojištění v cizině. Neuvádějte zde
+doby pojištění získané podle československých nebo českých právních
+předpisů. Doby pojištění získané v Československu a v České
+republice předejte pomocí tlačítka "PŘIDAT DOBU Z ČR". Doporučujeme
+přiložit sken dokladů, které nositeli pojištění daného státu usnadní
+správně určit příslušnou dobu pojištění.`,
+addForeignSubtitleProbate: `Uveďte informace o dobách pojištění zemřelého/zemřelé v cizině.
+Neuvádějte zde doby pojištění získané podle československých nebo
+českých právních předpisů. Doporučujeme přiložit sken dokladů, které
+nositeli pojištění daného státu usnadní správně určit příslušnou
+dobu pojištění.`,
+addPeriodTypeForeignHint: `
+<p>
+"Doba bydlení" - Jedná se o speciální doby
+pojištění, které existují ve státech s
+rezidenčním důchodovým systémem, např. ve
+Finsku, Švédsku, Nizozemsku.
+</p>
+<p>
+"Další druhy dob pojištění" - Jedná se o dobu,
+kterou nebylo možné podřadit pod žádný z výše
+uvedených druhů dob pojištění.
+</p>`,
+dateFromForeignHint: `Vyplňte datum počátku doby ve formátu DD.MM.RRRR.`,
+unknownPeriodStart: "Nevím přesný začátek doby",
+unknownPeriodStartHint: "Vyplňte alespoň odhadem položku Datum od.",
+dateToForeignHint: `Vyplňte datum konce přidávané doby ve formátu
+DD.MM.RRRR. Musí být pozdější než předchozí datum.`,
+unknownPeriodEnd: "Nevím přesný konec doby",
+unknownPeriodEndHint: "Vyplňte alespoň odhadem položku Datum od.",
+stillContinues: `Doba stále trvá`,
+messageIsClseuSmlstOsmlst: `Tato doba pojištění se zohledňuje jak pro nárok na důchod (přihlíží
+se k ní pro účely splnění podmínky potřebné doby pojištění), tak pro
+výši důchodu (zohlední se při výpočtu odhadované výše důchodu),
+pokud se nepřekrývá s českou dobou pojištění (v takovém případě má
+přednost česká doba).`,
+messageBefore1996: `Tato doba pojištění se zohledňuje jen jako vyloučená doba při
+stanovení osobního vyměřovacího základu. Pro nárok na důchod se k ní
+však nepřihlíží.`,
+messageAfter1995: `Tuto dobu nelze zohlednit pro nárok na důchod ani při výpočtu
+důchodu.`,
+messageNesmlstTypeBoth: `Doba pojištění získaná před 1. 1. 1996 se zohledňuje jako vyloučená
+doba při stanovení osobního vyměřovacího základu. Dobu pojištění
+získanou po 31. 12. 1995 se pro nárok na důchod ani při výpočtu
+důchodu nezohledňuje.`,
+detailedInfo: "Podrobné informace k době",
+detailedInfoSubtitle: `Uveďte informace o Vašich dobách pojištění v cizině. Neuvádějte
+zde doby pojištění získané podle československých nebo českých
+právních předpisů. Doby pojištění získané v Československu a v
+České republice se uvádí do části Přehled o činnostech a
+náhradních dobách. Doporučujeme přiložit sken dokladů, které
+nositeli pojištění daného státu usnadní správně určit příslušnou
+dobu pojištění.`,
+detailedInfoSubtitleProbate: `Uveďte informace o dobách pojištění zemřelého/zemřelé v cizině.
+Neuvádějte zde doby pojištění získané podle československých
+nebo českých právních předpisů. Doporučujeme přiložit sken
+dokladů, které nositeli pojištění daného státu usnadní správně
+určit příslušnou dobu pojištění.`,
+occupationTypeDuringEmployment: `Druh povolání v období zaměstnání nebo
+samostatné výdělečné činnosti.`,
+insuranceNumber: "Číslo pojištění",
+insuranceNumberHint: `Uveďte číslo pojištění, které Vám bylo
+pro účely sociálního zabezpečení
+přiděleno, u OSVČ případně uveďte
+registrační číslo.`,
+insuranceNumberHintProbate: `Pokud jej znáte, uveďte číslo pojištění,
+které bylo zemřelému/zemřelé pro účely
+sociálního zabezpečení přiděleno, u OSVČ
+případně uveďte registrační číslo.`,
+employerFullName: "Jméno zaměstnavatele",
+educationalInstitutionName: "Název vzdělávací instituce",
+institutionNamePayingBenefits: "Název instituce vyplácející dávky",
+documentsForRecognizingPeriods: "Doklady k uznání doby",
+additionalInfo: "Další užitečné informace ohledně doby",
+additionalInfoHint:
+"Uveďte další informace týkající se daného období, které nebylo možné uvést výše.",
+employerAddress: "Adresa zaměstnavatele",
+confirmation: "Potvrzení",
+confirmationTitle: `ČSSZ bude k této zahraniční době pojištění přihlížet pouze v takovém
+rozsahu, v jakém bude potvrzena po podání žádosti o důchod
+příslušnou zahraniční institucí.`,
+periodVerificationTitle: "Žádost o prověření doby",
+provideReasonForVerification: `Uveďte důvod vaší žádosti o prověření vybrané doby na ČSSZ.
+Důvody popište písemně, případně k nim přiložte doklady.`,
+verificationReason: "Důvod prověření",
+documentForVerification: "Doklad k prověření",
+csszVerification: "Prověření na ČSSZ",
+periodToVerify: "Doba k prověření",
+excludedPeriod: "Vyloučená doba",
+cancelVerification: "Zrušit žádost o prověření",
+verifyPeriod: "Prověřit dobu",
+detail: "Detail",
+},
+identificationData: {
+title: "Základní informace o žadateli a adresy",
+titleProbate: "Žadatel/žadatelka",
+basicInfoTitle: `Základní informace o žadateli`,
+germanId: `Osobní německé daňové identifikační číslo pojištěné osoby`,
+requestForInsuredPersonId: `Žádám o přídělení evidenčního čísla
+pojištěnce`,
+insuredPersonIdHint: `Evidenční číslo pojištěnce (pokud nemáte
+rodné číslo) je nezbytné pro vyřízení Vaší
+žádosti.`,
+anotherPhoneNumber: "Další telefonní číslo",
+maritalStatusSubtitle: `Uveďte Váš rodinný stav výběrem z nabízených možností včetně uvedení
+data, od kterého příslušný rodinný stav trvá. Pokud došlo v průběhu
+Vašeho života ke změně rodinného stavu, uveďte všechny tyto etapy včetně
+data, od kterého příslušný stav trval.`,
+maritalStatusSubtitleHint: `Pro doplnění rodinného stavu a data změny klikněte na "Přidat další
+rodinný stav". Přidaná období rodinných stavů lze smazat křížkem.`,
+addAnotherMaritalStatus: "Přidat další rodinný stav",
+maritalStatusHint: `Kdy mám vybrat "spolužití" nebo "odloučený/á"?
+Možnost spolužití zvolte v případě, kdy žijete s
+druhem/družkou, avšak nejedná se o manželství,
+ani o registrované partnerství. Žijete-li v
+odloučení, vyberte možnost "odloučený/odloučená"
+pouze v případě, pokud žádáte o důchod ze státu,
+který tento rodinný stav podle svých právních
+předpisů uznává. V takovém případě přiložte
+doklad. Pokud daný stát tento stav neuznává nebo
+nemáte doklad, vyberte "ženatý/vdaná."`,
+dateOfChange: "Datum změny",
+dateOfChangeHint: `Uveďte datum, od něhož uvedený rodinný stav
+nastal. Lze uvést i předchozí rodinné stavy, a
+to kliknutím na tlačítko "Přidat".`,
+persistsSinceBirth: `Trvá od narození`,
+persistsSinceBirthHint: `Jste-li od narození stále svobodný/á, můžete místo
+data změny zakliknout "Trvá od narození".`,
+},
+person: {
+titleBeforeName: "Titul před jménem",
+name: "Jméno",
+nameHint: `V případě více jmen lze uvést všechna, oddělena
+mezerou.`,
+surname: "Příjmení",
+surnameHint: `V případě více příjmení lze uvést všechna,
+oddělena mezerou.`,
+titleAfterName: "Titul za jménem",
+birthName: "Rodné jméno",
+birthNameHintPartner: `Vyplňte jeho/její rodné jméno. V případě více
+jmen lze uvést všechna, oddělena mezerou.`,
+birthSurname: "Rodné příjmení",
+birthSurnameHintDiseased: `Vyplňte rodné příjmení zemřelého/zemřelé, i
+pokud je shodné příjmením, které měl (měla) ke
+dni smrti.
+V případě více příjmení lze uvést všechna,
+oddělena mezerou.`,
+birthSurnameHintPartner: `Vyplňte jeho/její rodné příjmení. V případě
+více příjmení lze uvést všechna, oddělena
+mezerou.`,
+birthSurnameHint: `Vyplňte své rodné příjmení (i pokud je shodné se
+současným). V případě více příjmení lze uvést všechna,
+oddělena mezerou.`,
+formerName: "Dřívější jméno",
+formerNameHintPartner: `Vyplňte jeho/její dřívější jméno v případě, že
+si je změnil/a. Pokud měl/a více jmen, lze uvést
+všechna, oddělena mezerou.`,
+
+formerSurname: "Dřívější příjmení",
+formerSurnameHintPartner: `Vyplňte jeho/její dřívější příjmení v případě,
+že si je změnil/a. Pokud měl/a více příjmení,
+lze uvést všechna, oddělena mezerou.`,
+pin: "Rodné číslo / Evidenční číslo pojištěnce",
+pinHint: "Rodné číslo ve tvaru XXXXXXXXX(X)",
+pinHintDetailedPartner: `Pokud nebylo v ČR rodné číslo přiděleno, uveďte
+jeho/její české evidenční číslo pojištěnce, pokud bylo
+přiděleno. Číslo pojištění přidělené v zahraničí se zde
+neuvádí.`,
+pinHintDetailedDeceased: `Rodné číslo nebo evidenční číslo zemřelého/zemřelé je
+údajem potřebným pro správné posouzení Vašeho nároku na
+pozůstalostní důchod. Pokud Vám toto RČ/EČP není známo,
+vyplňte prosím alespoň další identifikační údaje
+zemřelého/zemřelé.`,
+dateOfBirth: "Datum narození",
+dateOfDeath: "Datum úmrtí",
+gender: "Pohlaví",
+maritalStatus: "Rodinný stav",
+maritalStatusHint: "Vyberte Váš současný rodinný stav.",
+placeOfBirth: "Místo narození",
+placeOfBirthHint: `Není-li Vám známo místo narození, napište
+"nezjištěno".`,
+districtOfBirth: "Okres narození",
+stateOfBirth: "Stát narození",
+regionOfBirth: "Region narození",
+regionOfBirthHint: `Uveďte region svého narození, pokud je Vám znám
+a v daném státě se používá. (Jste-li narozen/a v
+České republice, bude volba neaktivní.)`,
+phoneCodeNotFound: "Předvolba nenalezena.",
+phoneNumberHint: `Zadejte Vaše telefonní číslo, na kterém jste k
+zastižení, pokud by Vás {'@'}ČSSZ{'@'} potřebovala rychle
+kontaktovat. Může být pevná linka i mobilní telefon.`,
+contactPhoneNumber: "Kontaktní telefonní číslo",
+email: "E-mail",
+dataBox: "ID datové schránky",
+dataBoxHint: `Zadejte identifikační číslo Vaší datové schránky,
+pokud ji vlastníte.
+<br />
+Vlastníte-li datovou schránku, budou Vám informace o
+žádosti zasílány právě přes datovou schránku.`,
+nationality: "Státní občanství",
+nationalityNotFound: "Žádné občanství nebylo nalezeno.",
+nationalityHint: `Vyberte státní občanství. Lze uvést i více státních
+příslušností, přichází-li to v úvahu.`,
+},
+basicInfo: {
+title: "Základní informace žádosti",
+claimSubmissionDate: "Datum uplatnění nároku",
+claimSubmissionDateHint: `Toto datum je automaticky vyplněno datem založení
+žádosti. Pokud však od tohoto dne uplynulo více než
+90 dní, datum se aktualizuje dnem, kdy znovu
+otevřete žádost.`,
+applicationDraftingDate: "Datum sepsání žádosti",
+applicationDraftingDateHint: `Toto datum bylo automaticky vyplněno datem vzniku
+žádosti. Datum sepsání žádosti se bude aktualizovat
+na datum znovuotevření žádosti.`,
+pensionApplicationHint: `Nápověda k žádosti o důchod`,
+parentsTitle: "Rodiče",
+parentsSubtitle: "Doplňte informace o Vašich rodičích.",
+parentsSubtitleDiseased: `Doplňte informace o rodičích zemřelého/zemřelé.`,
+fatherName: "Jméno otce",
+fatherBirthSurname: "Rodné příjmení otce",
+motherName: "Jméno matky",
+motherBirthSurname: "Rodné příjmení matky",
+receivingPensionTitle: "Pobírání důchodu",
+receivingPensionSubtitle: `Pobíráte důchod od jiného českého orgánu sociálního zabezpečení?`,
+addAnotherPension: "Přidat další důchod",
+otherInfoTitle: "Ostatní informace o žadateli",
+ongoingInsolvency: `Je u Vás evidováno insolvenční řízení?`,
+executionOfDecisionOrdered: `Byl ve Vašem případě nařízen výkon rozhodnutí?`,
+executionOfDecisionOrderedHint: `Co je výkon rozhodnutí? Výkon rozhodnutí neboli vykonávací
+řízení je druhem civilního řízení, které slouží k vymožení
+dluhu a bylo nařízeno soudem, soudním exekutorem nebo
+příslušným správním orgánem.`,
+wageGarnishmentsCarriedOut: `Provádí se u vás srážky ze mzdy?`,
+wageGarnishmentsCarriedOutHint:
+"Souvisí s výše uvedeným výkonem rozhodnutí.",
+belongsToPeopleDeclaredBankrupt: `Patříte do okruhu osob, u nichž byl prohlášen konkurz na
+majetek?`,
+memberStatesIdTitle: `Členské státy, v nichž Vám bylo přiděleno osobní identifikační číslo`,
+memberStatesIdSubtitle: `Vyberte členské stát(y) EU v nichž Vám bylo přiděleno osobní
+identifikační číslo. Pro státy mimo EU, EHP nebo nejde-li o
+Švýcarsko či Spojené království se tyto položky nevyplňují.`,
+memberStatesIdSubtitleHint: `Pro přidání státu stiskněte "Přidat stát". Níže můžete státy přidat,
+upravit nebo smazat.`,
+relationToDeceased: `Jaký je Váš vztah k zemřelému?`,
+sharedHouseholdWithDeceased: `Sdílel/a jste se zemřelým/zemřelou domácnost?`,
+cohabitationStartDate: `Datum zahájení společného života`,
+deceasedRegisteredPartnershipStartDate: `Datum uzavření registrovaného partnerství se zemřelou
+osobou`,
+hadChildrenWithDeceased: `Měl/měla jste se zemřelou osobou dítě?`,
+expectingAChildWithDeceased: `Čekáte se zemřelou osobou dítě?`,
+expectedChildDateOfBirth: `Předpokládané datum narození dítěte`,
+marriageAfterDeceased: `Uzavřel jste sňatek nebo registrované partnerství po
+úmrtí zemřelé osoby?`,
+dateOfMarriage: `Datum sňatku nebo uzavření registrovaného
+partnerství`,
+newSpouseOfPartner: `Nový manžel/manželka nebo partner/partnerka`,
+cohabitationWithNewSpouse: `Žijete s novým manželem/manželkou nebo
+partnerem/partnerkou?`,
+},
+deceased: {
+title: "Zemřelý/zemřelá",
+subtitle: "Identifikační údaje",
+lastAddress: "Poslední adresa zemřelého",
+lastAddressWasForeign: "Poslední adresa zemřelého byla v zahraničí",
+parents: "Rodiče",
+otherInfo: "Ostatní informace",
+relationToDeceasedMessage: `Pro možnost vyplnění vztahu k zemřelému vyberte druh důchodu v sekci
+Úvod žádosti.`,
+placeOfDeath: "Místo úmrtí",
+causeOfDeath: "Příčina úmrtí",
+deathCertificate: "Úmrtní list",
+deathCertificateTitle: "Výpis z úmrtního listu",
+deathCertificateSubtitle: "Uveďte údaje zapsané v úmrtním listu.",
+titleForeign: "Důchod zemřelého/zemřelé ze zahraničí",
+receivedPensionForeign:
+"Pobíral/a zemřelý/zemřelá důchod ze zahraničí?",
+receivedPensionForeignHint: `V případě, že zemřelý/zemřelá byl/a poživatelem
+cizozemských důchodů, vyplňte o nich informace.`,
+pensionType: "Druh důchodu",
+institutionName: "Název instituce",
+caseNumber: "Číslo případu",
+dateOfEntitlementToPension: "Datum vzniku nároku na důchod",
+},
+deceasedInsurancePeriods: {
+title: `Informace o dobách pojištění zemřelého/zemřelé`,
+subtitle: `V této části doplňte pomocí interaktivního dotazníku informace
+týkající se zemřelého/zemřelé potřebné pro nárok na pozůstalostní
+důchod. Pokuste se o co nejpřesnější vyplnění dotazníku, jelikož
+tyto údaje nemusí být v evidenci @ČSSZ@.`,
+periodTitleStudy: "Informace o studiu zemřelého",
+periodTitleArmy: "Informace o vojenské službě zemřelého",
+periodTitleCivilService: "Informace o civilní službě zemřelého",
+periodTitleCare: "Informace o době péče",
+studied: `Studoval/a (popřípadě učil/a se) zemřelý/á?`,
+studiedHint: `Pro nárok na důchod a jeho výši nemá přímý vliv stupeň
+dosaženého vzdělání, ale délka doby studia. Doplňte informace a
+doklady, které doby studia dokazují. Pro nárok na důchod a jeho
+výši mají vliv doby získané zemřelou osobou.`,
+addAnotherStudy: "Přidat další studium",
+provideStudiumInfo: `Doplňte informace o studiu/učení zemřelého/zemřelé. Pokud
+zemřelý/á studoval/a více škol/učilišť (popřípadě bylo studium
+přerušeno a následně obnoveno), lze přidat další dobu
+studia/učení kliknutím na tlačítko „Přidat další studium“.`,
+studyAttachments: {
+title: `Dobu studia je možné doložit následujícími doklady o době studia
+(popřípadě učení), a to i v případě, že nebylo dokončeno:`,
+apprenticeshipCertificate: "výuční list",
+certificate: `vysvědčení z jednotlivých ročníků a maturitní
+vysvědčení;`,
+studyReport: `výkaz o studiu (index), vysvědčení o státní závěrečné
+zkoušce, diplom`,
+lengthOfStudyConfirmation: `potvrzení školy o délce studia`,
+},
+provideArmyInfo: "Doplňte informace o vojenské službě zemřelého.",
+armyAttachments: {
+title: `Dobu strávenou ve vojenské službě je možné doložit následujícími
+doklady:`,
+armyBook: "vojenská knížka",
+administrativeArchiveConfirmation: `potvrzení Správního archivu České republiky (sídlí na
+adrese: Nám. Republiky 4, Olomouc)`,
+},
+provideCivilServiceInfo: `Doplňte informace o civilní službě zemřelého.`,
+provideCivilServiceInfoHint: `Dobu výkonu civilní služby je možné doložit pomocí potvrzení o
+vykonání civilní služby`,
+provideCareInfo: `Doplňte informace o době, kdy zemřelý/á pečoval/a o osobu závislou
+na péči jiné osoby a přiložte doklad vztahující se k této době.
+Pokud zemřelý/á pečoval vícekrát, uveďte další doby pomocí tlačítka
+"Přidat další dobu".`,
+proofOfStudy: "Doklad o studiu",
+proofOfStudyHint: `Doporučujeme přiložit sken maturitního vysvědčení,
+výučního listu, indexu vysoké školy či diplomu
+(podle druhu studia). Přiložení dokladů zjednoduší
+uznání doby.`,
+proofOfArmy: "Doklad o vojenské službě",
+proofOfCivilService: "Doklad o civilní službě",
+proofOfCare: "Doklad o péči",
+noProofOfStudy: "Nemám doklady o studiu zemřelého/zemřelé",
+noProofOfArmy: "Nemám doklady o vojenské službě zemřelého",
+noProofOfCivilService: "Nemám doklady o civilní službě zemřelého",
+noProofOfCare: "Nemám doklady o péči zemřelého/zemřelé",
+unknownDateFrom: "Nevím přesný začátek doby",
+unknownDateTo: "Nevím přesný konec doby",
+finishedArmyService:
+"Absolvoval zemřelý základní vojenskou službu?",
+finishedCivilService: "Absolvoval zemřelý civilní službu?",
+finishedCivilServiceHint: `Civilní službou byla služba, kterou byl občan povinen vykonat,
+jestliže z důvodů svědomí nebo náboženského vyznání odmítl
+vykonávat vojenskou základní (náhradní) službu nebo vojenská
+cvičení.`,
+registeredInLaborOffice: `Byl/a zemřelý/á v evidenci u úřadu práce?`,
+caredForDependentPerson: `Pečoval/a zemřelý/á o osobu závislou na péči jiné osoby?`,
+participatePensionSavings2013To2015: `Patřil/a zemřelý/á mezi osoby, které byly v období let 2013 – 2015
+účastny důchodového spoření?`,
+whenStartedSaving: "Kdy začal/a spořit?",
+whenStartedSavingHint: "Otázka se týká důchového spoření.",
+whenPensionSavingsEnd: "Kdy důchodové spoření skončilo?",
+wasAmongInvalidlyTerminatedEmployees: `Patřil/a zemřelý/á mezi osoby, kterým byl ukončen pracovní poměr
+neplatně?`,
+provideInvalidTerminationDecisionByCourt: `Uveďte, zda u zemřelého/zemřelé podle rozhodnutí např. soudu
+došlo k neplatnému ukončení pracovního poměru.`,
+provideInvalidTerminationDecisionByCourtHint: `Vyplňte datum neplatného skončení pracovního poměru, název
+zaměstnavatele a kdo vydal rozsudek o neplatném skončení
+pracovního poměru. Nezapomeňte přiložit sken rozsudku pomocí
+tlačítka "Vybrat soubor". Popř. můžete doplnit libovolný text do
+kolonky "Poznámka".`,
+terminationOfEmploymentDate: "Datum skončení pracovního poměru",
+verdictIssued: "Rozsudek vydal",
+eligibleForRehabilitationOrCompensation: `Patřil/a zemřelý/á mezi osoby, kterých se týká možnost
+soudní/mimosoudní rehabilitace nebo odškodnění?`,
+requestPensionAdjustmentRehabilitation:
+"Žádám o úpravu důchodu v rámci soudní rehabilitace.",
+requestPensionAdjustmentRehabilitationHint: `Kdo má nárok žádat o úpravu důchodu v rámci
+soudní rehabilitace podle zákona č. 119/1990
+Sb.? Nárok na úpravu starobního nebo invalidního
+důchodu mají osoby, které byly v období od 25.
+února 1948 do 1. ledna 1990 pravomocně
+odsouzeny, vykonaly trest odnětí svobody nebo
+vazbu a odsuzující soudní rozhodnutí bylo
+zrušeno na základě zákona č. 119/1990 Sb. (popř.
+byly nezákonně vězněny, aniž by došlo k
+odsouzení, a byly rehabilitovány podle § 33
+zákona č. 119/1990 Sb.).`,
+reasonForNoAttachment: "Důvod nepřipojení",
+requestPensionAdjustmentExtrajudicialRehabilitation: `Žádám o úpravu důchodu v rámci mimosoudní
+rehabilitace.`,
+requestPensionAdjustmentExtrajudicialRehabilitationHint: `Kdo má nárok žádat o úpravu důchodu v rámci
+mimosoudní rehabilitace podle zákona č. 87/1991
+Sb.? Zákon č. 87/1991 Sb. se vztahuje na
+zmírnění následků majetkových a některých jiných
+křivd vzniklých občanskoprávními a
+pracovněprávními úkony a správními akty,
+učiněnými v období od 25. února 1948 do 1. ledna
+1990 v rozporu se zásadami demokratické
+společnosti. Na úpravu starobního nebo
+invalidního důchodu mají nárok: - osoby, s nimiž
+byl ukončen pracovní vztah z důvodu politické
+perzekuce, - umělci, kteří byli z perzekučních
+důvodů vyloučeni ze sociálního zabezpečení
+umělců, - studenti, kteří byli z perzekučních
+důvodů vyloučeni ze studia na vysokých školách,
+- občané, kteří konali základní vojenskou službu
+nebo mimořádné vojenské cvičení v pomocných
+technických praporech, osoby zařazené do táborů
+nucených prací a osoby internované v
+centralizačních klášterech.`,
+communistVictimsPensionSupplement: `Žádám o poskytnutí příplatku k důchodu pro osoby
+perzekvované komunistickým režimem.`,
+communistVictimsPensionSupplementHint: `
+<p>
+Kdo má nárok žádat o poskytnutí příplatku
+pro osoby perzekvované komunistickým režimem
+podle nařízení vlády č. 622/2004 Sb.?
+</p>
+<p>
+Nárok na příplatek k důchodu podle nařízení
+vlády č. 622/2004 Sb. mají:
+</p>
+<ul>
+<li>
+političtí vězni, tedy osoby, které byly
+v době od 25. února 1948 do 31. prosince
+1989 odsouzeny a vykonaly trest odnětí
+svobody nebo vazbu pro trestný čin, za
+který byly rehabilitovány podle zákona
+č. 119/1990 Sb. (popř. zákona č. 82/1968
+Sb. nebo zákona č. 198/1993 Sb.) a
+pobírají starobní důchod nebo invalidní
+důchod pro invaliditu třetího stupně,
+</li>
+<li>
+vdovy a vdovci pobírající vdovský nebo
+vdovecký důchod po politickém vězni nebo
+po osobě, která ve výše uvedené době
+zemřela při pokusu o opuštění
+Československa násilnou smrtí způsobenou
+státní mocí,
+</li>
+<li>
+sirotci po politických vězních zemřelých
+v době soudně rehabilitovaného věznění a
+sirotci po osobách, které ve výše
+uvedené době zemřely při pokusu o
+opuštění Československa násilnou smrtí
+způsobenou státní mocí, jestliže ke dni
+úmrtí rodiče-politického vězně nedosáhli
+věku 18 let a pobírají kterýkoli druh důchodu.
+</li>
+</ul>
+<p>
+Podmínkou přiznání příplatku přitom je, že
+žadatel je ke dni podání žádosti o příplatek
+občanem České republiky a stanovených druh
+důchodu pobírá z českého důchodového
+pojištění.
+</p>
+`,
+resistanceParticipantsPensionSupplement: `Žádám o poskytnutí příplatku k důchodu pro
+účastníky odboje.`,
+resistanceParticipantsPensionSupplementHint: `
+<p>
+Kdo má nárok žádat o poskytnutí příplatku
+pro účastníky odboje podle zákona č.
+357/2005 Sb.?
+</p>
+<p>Nárok na příplatek k důchodu mají:</p>
+<ul>
+<li>
+účastníci odboje z období druhé světové
+války, kterým o tom bylo vydáno
+osvědčení Ministerstvem obrany a
+pobírají starobní důchod nebo invalidní
+důchod pro invaliditu třetího stupně;
+účastníky odboje jsou osoby, které byly
+v letech 1939 až 1945 příslušníky
+československé armády v zahraničí,
+konaly službu ve spojenecké armádě, byly
+československým politickým vězněm a
+další osoby vymezené v zákoně č.
+255/1946 Sb.,
+</li>
+<li>
+vdovy a vdovci po účastnících odboje,
+pokud po nich pobírají vdovský nebo
+vdovecký důchod,
+</li>
+
+<li>
+sirotci po účastnící odboje, pokud
+pobírají kterýkoli druh důchodu, a to za
+podmínky, že rodič-účastník odboje padl,
+byl popraven nebo zemřel ve vyšetřovací
+vazbě, vězení nebo koncentračním táboře
+a sirotek ke dni úmrtí tohoto rodiče
+nedosáhl věku 18 let.
+</li>
+</ul>
+<p>
+Podmínkou přiznání příplatku přitom je, že
+žadatel je ke dni podání žádosti o příplatek
+občanem České republiky a stanovený druh
+důchod pobírá z českého důchodového
+pojištění.
+</p>`,
+resistanceParticipantsCommunistVictimsPensionSupplement: `Žádám o poskytnutí zvláštního příspěvku k
+důchodu pro účastníky odboje a osoby
+perzekvované komunistickým režimem.`,
+resistanceParticipantsCommunistVictimsPensionSupplementHint: `
+<p>
+Kdo má nárok žádat o poskytnutí zvláštního
+příspěvku k důchodu podle zákona č. 357/2005
+Sb.?
+</p>
+<p>
+Nárok na zvláštní příspěvek mají osoby
+pobírající starobní důchod nebo invalidní
+důchod (kteréhokoli stupně) z českého
+důchodového pojištění, které jsou:
+</p>
+<ul>
+<li>
+účastníci odboje z období druhé světové
+války a účastníci květnového povstání
+(příslušné osvědčení, resp. potvrzení o
+této skutečnosti vydává Ministerstvo
+obrany),
+</li>
+<li>
+osoby soudně rehabilitované, pokud
+neoprávněné věznění trvalo alespoň 12
+měsíců (anebo méně, skončilo-li ze
+zdravotních důvodů),
+</li>
+
+<li>
+osoby zařazené v pomocných technických
+praporech, táborech nucených prací nebo
+obdobných zařízeních, pokud doba pobytu
+trvala alespoň 12 měsíců (anebo méně,
+pokud zařazení skončilo ze zdravotních
+důvodů).
+</li>
+</ul>
+<p>
+Podmínkou přiznání zvláštního příspěvku výše
+uvedeným osobám je občanství České republiky
+ke dni podání žádosti.
+</p>
+<p>
+Nárok na zvláštní příspěvek k důchodu mají
+dále vdovy a vdovci pobírající vdovský nebo
+vdovecký důchod z českého důchodového
+pojištění po výše uvedených osobách (vyjma
+vdov a vdovců po účastnících květnového
+povstání). Nárok na zvláštní příspěvek má
+také vdova nebo vdovec po osobě uvedené ve
+druhé a třetí odrážce, která byla
+neoprávněně omezena na osobní svobodě po
+dobu kratší 12 měsíců, avšak byl na ní
+vykonán trest smrti nebo v průběhu tohoto
+neoprávněného věznění zemřela.
+</p>`,
+resistanceParticipantsAgainstCommunistPensionSupplement: `Žádám o úpravu důchodu účastníka odboje a odporu
+proti komunismu.`,
+resistanceParticipantsAgainstCommunistPensionSupplementHint: `
+<p>
+Kdo má nárok na úpravu důchodu podle zákona
+č. 262/2011 Sb., o účastnících odboje a
+odporu proti komunismu?
+</p>
+
+<ul>
+<li>
+osoby, kterým bylo Ministerstvem obrany
+vydáno osvědčení o účasti na odboji a
+odporu proti komunismu, pobírají
+starobní důchod nebo invalidní důchod
+(kteréhokoli stupně) a procentní výměra
+tohoto důchodu nedosahuje stanovené
+minimální výše,
+</li>
+<li>
+vdovy a vdovci po účastnících odboje a
+odporu proti komunismu pobírající po něm
+vdovský nebo vdovecký důchod, pokud
+procentní výměra tohoto důchodu
+nedosahuje stanovené minimální výše.
+</li>
+</ul>`,
+compensationForWorkIncapacityInjury: `Byla zemřelému/zemřelé vyplácena náhrada za ztrátu na výdělku po
+skončení pracovní neschopnosti náležející za pracovní úraz (nemoc z
+povolání) podle Zákoníku práce?`,
+lastedUntilDeath: "Doba trvala do úmrtí",
+compensationDocument: "Doklad o náhradě",
+workRelatedDisability: `Vznikla invalidita zemřelého/zemřelé následkem pracovního úrazu?`,
+provideWorkRelatedDisabilityInfo: `Uveďte, kdy zemřelý/zemřelá utrpěl/a tento pracovní úraz a připojte
+hlášení zaměstnavatele ohledně zdravotního úrazu, máte-li k
+dispozici. Popř. doplňte libovolnou poznámku.`,
+injuryDate: "Datum úrazu",
+injuryDateHint: `Uveďte den, kdy zemřelý/zemřelá utrpěl/a úraz, který
+měl za následek vznik invalidity.`,
+employerReport: "Hlášení zaměstnavatele",
+employerReportProvidedLater:
+"Hlášení žadatele bude doloženo dodatečně",
+employerReportProvidedLaterHint: `Nemáte-li k dispozici hlášení
+zaměstnavatele, uveďte, zda bude doloženo
+dodatečně.`,
+historyTitle: `Historie dob pojištění zemřelého/zemřelé v cizině`,
+historySubtitle: `Uveďte všechny Vám známé informace o dobách pojištění
+zemřelého/zemřelé v cizině. Neuvádějte zde doby pojištění získané
+podle československých nebo českých právních předpisů. Doporučujeme
+přiložit sken dokladů, které nositeli pojištění daného státu usnadní
+správně určit příslušnou dobu pojištění. Dobu přidáte pomocí
+tlačítka "Přidat zahraniční dobu". Po přidání bude doba zobrazena v
+tabulce níže. Upravovat doby lze pomocí tlačítka "Upravit přidanou
+dobu". Doby lze také smazat stisknutím tlačítka "Smazat přidanou
+dobu".`,
+},
+partner: {
+title: "Manžel/ka, registrovaný partner/ka, druh/družka",
+noPartner: `V současnosti nemám manžela (manželku), registrovaného
+partnera (partnerku), druha (družku), nebo o něm (ní) nechci
+uvádět informace.`,
+info: `Osobní informace o manželovi/manželce, registrovaném
+partnerovi/partnerce či druhovi/družce`,
+provideInfo: `Vyplňte informace o své(m) současné(m) manželce(manželovi),
+registrované(m) partnerce(partnerovi) nebo družce(druhovi).`,
+additionalInfoTitle: `Doplňující informace o manželovi/manželce, registrovaném
+partnerovi/partnerce či druhovi/družce`,
+foreignInsuranceEu: `Pojištění v jiném členském státě EU`,
+foreignInsuranceEuHint: `Vyberte členské stát(y) EU, v nichž byl/a Váš/Vaše manžel/ka
+důchodově pojištěn/a a bylo jemu/jí zde přiděleno osobní
+identifikační číslo. Pokud osobní identifikační číslo(a)
+neznáte, ponechejte položku prázdnou. Pro státy mimo EU, EHP
+nebo nejde-li o Švýcarsko či Spojené království se tyto položky
+nevyplňují. Pro přidání státu stiskněte "Přidat stát". Níže
+můžete státy přidat, upravit nebo smazat.`,
+additionalInfoSubtitle: `Další informace o manželovi/manželce, registrovaném
+partnerovi/partnerce či druhovi/družce`,
+typeOfMarriage: "Druh svazku",
+cohabitation: `Žijete s manželem/manželkou, registrovaným
+partnerem/partnerkou či druhem/družkou ve stejné
+domácnosti?`,
+declarationPermanentCareNeed: `Prohlášení o potřebě stálé péče o pojištěnou
+osobu`,
+declarationPermanentCareNeedHint: `Vyplňte zda Vy (žadatel o důchod) potřebujete či
+nepotřebujete stálou péči, neboť nejste schopen
+bez pomoci vykonávat činnosti běžně denní
+potřeby, např. najíst se a obléci se (v případě
+potřeby stálé péče by měla být přiložena
+lékařská zpráva).`,
+parentInfo: `Údaje o rodičích manžela/manželky, registrovaného
+partnera/partnerky či druha/družky`,
+},
+children: {
+titleProbate: "Děti žadatele/žadatelky",
+title: "Děti",
+additionalInfo: "Doplňující informace",
+subtitle: `Pro stanovení důchodového věku / zhodnocení doby péče o dítě do
+4 let věku / žádost o výchovné, vyplňte níže uvedené informace
+pro každé z vychovaných dětí.`,
+womenCareImpactOnRetirementAge: `Kdy péče o dítě ovlivňuje důchodový věk ženy?`,
+womenCareImpactOnRetirementAgeItem: `Žena osobně pečuje nebo pečovala o dítě ve věku do
+dosažení zletilosti alespoň po dobu deseti roků.`,
+womenCareImpactOnRetirementAgeItem2: `Pokud se žena ujala výchovy dítěte po dosažení
+osmého roku jeho věku, stačí, když žena osobně
+pečuje nebo pečovala o dítě ve věku do dosažení
+zletilosti aspoň po dobu pěti roků a nepřestala o ně
+pečovat před dosažením zletilosti.`,
+requestReviewChildcareBefore4: `Kdy je možné požádat o zhodnocení doby péče o dítě do 4 let
+věku?`,
+requestReviewChildcareBefore4Item: `Nárok na zhodnocení doby péče o dítě do 4 let věku má
+osoba (žena či muž), která pečovala o dítě do 4 let věku
+v největším rozsahu.`,
+whenCanRequestEducationalAllowance: `Kdy je možné požádat o výchovné za vychované dítě?`,
+whenCanRequestEducationalAllowanceItem: `Nárok na výchovné má osoba (žena či muž), která
+zajišťovala výchovu konkrétního dítěte v největším
+rozsahu.`,
+careAssessmentUnder4YearsInfo: `Pro zhodnocení doby péče o dítě do 4 let věku vyplňte níže
+uvedené informace pro každé z vychovaných dětí.`,
+careAssessmentUnder4YearsTime: `Kdy je možné požádat o zhodnocení doby péče o dítě do 4 let
+věku?`,
+careAssessmentUnder4YearsItem: `Nárok na zhodnocení doby péče o dítě do 4 let věku má
+osoba (žena či muž), která pečovala o dítě do 4 let věku
+v největším rozsahu.`,
+provideDetailedInfoProbate: `Uveďte informace o Vašich dětech pro uznání výchovy těchto dětí v
+návaznosti na to, zda Vám bude vdovský/vdovecký důchod náležet i po
+uplynutí jednoho roku od úmrtí manžela/manželky (zákonná základní
+délka nároku na vdovský/vdovecký důchod podle ust. § 50 odst. 1
+zákona o důchodovém pojištění). Takovým dítětem se rozumí dítě,
+které má po zemřelém/zemřelé nárok na sirotčí důchod, a nebo dítě,
+které bylo v rodině zemřelého/zemřelé vychováváno, jde-li o vlastní
+(osvojené) dítě žadatele/žadatelky nebo bylo-li aspoň jedním z nich
+převzato do dne smrti manžela/manželky do péče nahrazující péči
+rodičů.`,
+addAnother: "Přidat další dítě",
+detailedInfoTitle: `Údaje o dítěti`,
+name: "Jméno dítěte",
+surname: "Příjmení dítěte",
+pinHint: `Rodné číslo nebo evidenční číslo pojištěnce dítěte je
+údajem potřebným pro správné posouzení Vašeho nároku na
+důchod. Pokud Vašemu dítěti nebylo rodné ani evidenční
+číslo pojištěnce v ČR přiděleno, je pro zpracování
+žádosti o důchod nezbytné, aby ČSSZ dítěti přidělila
+náhradní identifikátor, kterým je evidenční číslo
+pojištěnce. Za tím účelem připojte sken rodného listu
+dítěte.Přílohu přiložte v sekci`,
+relationToChildDocuments: `Doklady o vztahu k dítěti`,
+provideAttachmentInSection: `Přílohu přiložte v sekci`,
+requestForRegistrationInCSSZ: `Žádám o zapsání dítěte do evidence ČSSZ ve vazbě
+na případné nároky z důchodového pojištění a
+přikládám jeho rodný list.`,
+birthName: "Rodné příjmení dítěte",
+birthDate: "Datum narození dítěte",
+deathDate: "Datum úmrtí dítěte",
+placeOfBirth: "Místo narození dítěte",
+placeOfBirthHint: `Není-li vám známo místo, kde se narodil/a, napište
+"nezjištěno".`,
+districtOfBirth: "Okres narození dítěte",
+relationToChild: "Vztah k dítěti",
+relationToChildHint: `Vztah k vlastnímu dítěti není nutné k žádosti
+dokládat. V případě, že nebude možné tento vztah
+ověřit ze strany OSSZ z příslušné databáze,
+budete k předložení rodného listu dodatečně
+vyzván/a.`,
+relationToChildHint2: `Pokud Vám bylo dítě svěřeno do péče na základě
+rozhodnutí soudu/příslušného orgánu, je nutno
+toto rozhodnutí k žádosti doložit v sekci`,
+childCareTitleProbate: "Péče o dítě",
+childCareTitle:
+"Uznání výchovy dítěte pro stanovení důchodového věku",
+childCarePeriod: `O uvedené dítě jsem pečoval/a v období:`,
+childCarePeriodDeclaration: `Čestně prohlašuji, že jsem o uvedené dítě pečovala v období:`,
+birth: "narození",
+exactDate: "přesné datum",
+startOfCare: "Začátek péče",
+adultHood: "zletilosti",
+endOfCare: "Konec péče",
+differentPersonName: "Jméno jiné osoby",
+differentPersonSurname: "Příjmení jiné osoby",
+differentPersonRelation: `Vztah této osoby k dítěti`,
+careByDifferentPerson: "Péče o dítě jinou osobou",
+careUpTo4Years: {
+title: `Uznání doby péče do 4 let jeho věku jako náhradní doby důchodového pojištění`,
+subtitle: `Za uvedené dítě žádám o uznání doby péče o dítě do 4 let
+jeho věku jako náhradní doby důchodového pojištění.`,
+ended: `Péče o dítě do 4 let věku skončila`,
+declaration: `Ve smyslu ustanovení § 85 odst. 3 zákona č. 582/1991
+Sb., ve znění pozdějších předpisů čestně prohlašuji,
+že jsem osobně zajišťoval/a péči o výše uvedené
+dítě.`,
+declaration2: `Ve smyslu ustanovení § 85 odst. 4 zákona č. 582/1991
+Sb., ve znění pozdějších předpisů čestně prohlašuji, že
+jsem zajišťoval/a péči o uvedené dítě:`,
+caredForProvided: `O uvedené dítě jsem pečoval/a:`,
+numberOfCareHoursPerDay: `Počet hodin péče denně`,
+careByDifferentPersonHint: `Bylo-li rozdělení péče mezi více osob složitější než
+předpokládá žádost je třeba vše podrobně rozepsat na
+zvláštním volném listu,který přiložíte k žádosti.`,
+differentPersonCared: "Jiná osoba o uvedené dítě pečovala:",
+differentPersonCareMethod: `Obsah (způsob) péče této jiné osoby ve vztahu k
+péči zajišťované prohlašující osobou:`,
+documentConfirmingCareDuration:
+"Dokumenty potvrzující dobu péče",
+documentConfirmingCareDurationHint: `V případě, že disponujete dokumenty, které podporují vaše
+tvrzení o péči o dítě, přiložte je k žádosti v sekci`,
+finalDeclaration: `Prohlašuji, že všechny mnou uvedené údaje
+odpovídají skutečnosti. Jsem si vědom/a
+případných nepříznivých právních následků
+nepravdivého prohlášení.`,
+finalDeclarationHint: `Úmyslné uvedení nesprávného či neúplného
+údaje v čestném prohlášení je přestupkem
+podle § 2 odst. 2 písm. a) zákona č.
+251/2016 Sb., ve znění pozdějších předpisů.
+V důsledku uvedení nepravdivých údajů pak
+může být založena také odpovědnost žadatele
+za vrácení neprávem vyplacených částek na
+starobním důchodu, příp. odpovědnost za
+trestný čin.`,
+},
+allowance: {
+title: `Zvýšení procentní výměry starobního důchodu za výchovu dítěte (výchovné)`,
+subtitle: `Žádám o zvýšení procentní výměry starobního důchodu
+z důvodu výchovy uvedeného dítěte`,
+differentPersonRelationHint: `Myslí se zejména příbuzenský, popř. jinak
+určený vztah.`,
+subtitleHint: `Výchovné náleží jen za dítě, o které rodič (nebo
+jiná osoba) osobně pečuje nebo pečoval alespoň po
+dobu deseti let do dosažení zletilosti dítěte. Pokud
+se ujme výchovy dítěte po dosažení osmého roku jeho
+věku, je podmínka výchovy dítěte splněna, jestliže
+osobně pečuje nebo pečoval o dítě až do jeho
+zletilosti po dobu alespoň pěti let. V případě, že
+dítě zemřelo po dosažení pěti let věku, bude
+výchovné náležet, jestliže muž nebo žena osobně
+pečovali o dítě od jeho narození do jeho úmrtí. Pro
+starobní důchody přiznané od data před 1. 1. 2023
+platí, že podmínka výchovy dítěte v případě jeho
+úmrtí je splněna, jestliže dítě zemřelo po dosažení
+šesti měsíců věku a bylo o něho pečováno až do jeho
+úmrtí.Nárok na výchovné bude mít vždy jen jeden z
+rodičů (případně jiná osoba), který o dítě pečoval v
+největším rozsahu.`,
+careDeclaration: `Čestně prohlašuji, že jsem osobně a v největším rozsahu
+pečoval/a o uvedené dítě`,
+careDeclaredByCourt: `Péče o dítě byla určena soudem nebo byla soudem
+schválena dohoda o péči o dítě`,
+caredByArmedForcesMember: `Pokud je Vám známo, že o toto dítě pečoval/a
+příslušník/příslušnice ozbrojených sil (např. policista, hasič,
+voják, příslušník vězeňské služby apod.), označte příslušné
+ministerstvo, které provádělo jeho/její důchodové pojištění:`,
+custodyChangeLegalDecision: `Od nabytí právní moci rozhodnutí příslušného orgánu do
+nabytí zletilosti dítěte došlo ke změně výchovných
+poměrů?`,
+provideCourtDecision: `Přiložte rozhodnutí soudu/schválení dohody soudem v sekci
+Doklady o vztahu k dítěti.`,
+declaration: `Prohlašuji, že pro zvýšení procentní výměry
+starobního důchodu jsem se vůči uvedenému dítěti
+nedopustil/a jako pachatel, spolupachatel nebo
+účastník úmyslného trestného činu proti životu a
+zdraví, proti svobodě a právům na ochranu
+osobnosti, proti lidské důstojnosti v sexuální
+oblasti nebo proti rodině a dětem podle
+trestního zákoníku nebo obdobných úmyslných
+trestných činů podle dříve platných právních
+předpisů. Prohlašuji, že všechny mnou uvedené
+údaje odpovídají skutečnosti. Jsem si vědom/a
+případných nepříznivých právních následků
+nepravdivých prohlášení.`,
+declarationHint: `Úmyslné uvedení nesprávného či neúplného údaje v
+čestném prohlášení je přestupkem podle § 2 odst.
+2 písm. a) zákona č. 251/2016 Sb., ve znění
+pozdějších předpisů. V důsledku uvedení
+nepravdivých údajů pak může být založena také
+odpovědnost žadatele za vrácení neprávem
+vyplacených částek na starobním důchodu, příp.
+odpovědnost za trestný čin.`,
+documentsConfirmingCare: `V případě, že disponujete dokumenty, které podporují vaše
+tvrzení o péči o dítě, přiložte je k žádosti v sekci`,
+},
+parentsTitle: "Údaje o rodičích",
+ofDiseased: `Jedná se současně o vlastní dítě
+zemřelého/zemřelé?`,
+fillGenderFirst: `Pro vyplnění údajů o rodičích prosím vyplňte pohlaví v sekci
+Žadatel/žadatelka.`,
+fillChildRelationFirst: `Pro vyplnění údajů o rodičích prosím vyplňte váš vztah k
+dítěti.`,
+fatherNotInBirthCertificate: `Otec v rodném listě neuveden`,
+relationDocumentsTitle: `Doklady o vztahu k dítěti`,
+providingRelationDocuments: `Přikládám doklad(y) o vztahu k dítěti`,
+provideReasonForNoAttachment: `Uveďte důvod nepřipojení dokladu o vztahu k
+dítěti.`,
+documentOfRelation: `Doklad o vztahu k dítěti`,
+moreInfo: {
+title: `Doplňující informace o dítěti`,
+subtitle: `Další informace o dítěti`,
+familyRelationship: `Jaký je Váš rodinný vztah k dítěti?`,
+otherChildInfo: `Podrobnosti o "Jiném dítěti"`,
+specifyRelation: `Specifikujte slovně, jaký je Váš rodinný vztah k
+dítěti.`,
+raisedUntil10: `Vychovával/a jste dítě od jeho narození do 10.
+narozenin?`,
+secondParent: "Druhý rodič dítěte",
+secondParentHint: `V následující části vyplňte údaje o druhém rodiči, který o
+dítě pečoval trvale (při volbě "Ne") nebo v době, kdy jste
+vy o dítě nepečoval/a (při volbě "Ano, dočasně"). Jedná se o
+osobu, která o dítě fakticky pečovala - tj. nejen biologický
+druhý rodič, ale i prarodič, osvojitel, pěstoun apod.`,
+regionOfBirthHint: `Uveďte region narození druhého rodiče, pokud
+je Vám znám a v daném státě se používá.`,
+germanPin: `Německé osobní identifikační číslo`,
+germanPinHint: `Vyplňte osobní identifikační číslo druhého
+rodiče v Německu, pokud jej má a je Vám
+známo.`,
+euMembersStatePin: `Členské státy EU, v nichž bylo Vašemu dítěti přiřazeno osobní
+identifikační číslo`,
+euMembersStatePinHint: `Vyberte členské stát(y) EU v nichž bylo Vašemu dítěti přiřazeno
+osobní identifikační číslo. Pro státy mimo EU, EHP nebo nejde-li o
+Švýcarsko či Spojené království se tyto položky nevyplňují. Pro
+přidání státu stiskněte "Přidat stát". Níže můžete státy přidat,
+upravit nebo smazat.`,
+},
+periods: {
+title: "Doby péče o dítě",
+subtitle: `V následující části vyplňte informace o období, kdy jste z důvodu
+péče o dítě nevykonával/a výdělečnou činnost. Jedná se o informace o
+dobách péče o dítě, které mohou mít význam pro důchodové nároky.
+Doby uvádějte zvlášť pro každý stát, ve kterém jste se o dítě
+staral/a.`,
+unknown: "neznámo",
+continues: "stále trvá",
+empty: `V přehledu nejsou uvedeny žádné doby péče o dítě.`,
+addHint: `Pro přidání doby péče vyplňte datum narození dítěte v sekci Údaje o
+dítěti.`,
+stateInWhichCared: `Stát, ve kterém {text} o dítě pečoval/a`,
+dateAfterBirth: `Datum může být až po datu narození dítěte.`,
+unkownCareStart: `Nevím přesný začátek období péče`,
+unknownCareEnd: `Nevím přesný konec období péče`,
+dateToHint: `Vyplňte přesné datum konce přidávané doby ve formátu
+DD.MM.RRRR. Musí být pozdější než předchozí datum.`,
+dateAfterBirthAndCareStart: `Datum může být až po datu narození dítěte a po datu
+začátku péče.`,
+careStillContinues: `Doba péče stále trvá`,
+continuedUntilDeath: `Doba péče trvala do smrti zemřelého/zemřelé`,
+documents: `Doklady k uznání doby péče`,
+moreUsefulInfo: `Další užitečné informace ohledně doby`,
+moreUsefulInfoHint: `Uveďte další užitečné informace týkající se daného období,
+které nebylo možné uvést výše.`,
+},
+},
+childrenOfDeceased: {
+title: "Děti zemřelého/zemřelé",
+subtitle: `Pro zhodnocení doby péče o dítě zemřelým/zemřelou vyplňte níže
+uvedené informace a doplňte doklady prokazující výchovu dětí nebo
+péči o děti pro každé z vychovaných dětí (u vlastních dětí není
+potřeba doklady doplňovat).`,
+relationToChild: "Vztah zemřelého/zemřelé k dítěti",
+caredInPeriod: `Zemřelý/zemřelá o dítě pečoval/a v období:`,
+caredUntil4: `Zemřelý/zemřelá o dítě pečoval/a do 4 let jeho věku.`,
+careUntil4Ended: `Péče o dítě zemřelým/zemřelou do 4 let jeho věku
+skončila`,
+declaration: `Ve smyslu ustanovení § 85 odst. 4 zákona č. 582/1991
+Sb., ve znění pozdějších předpisů, na základě svého
+nejlepšího vědomí, čestně prohlašuji, že zemřelý/á
+zajišťoval/a péči o uvedené dítě ve věku do 4 let.`,
+declaration2: `Ve smyslu ustanovení § 85 odst. 4 zákona č. 582/1991
+Sb., ve znění pozdějších předpisů, na základě svého
+nejlepšího vědomí, čestně prohlašuji, že zemřelý/á
+zajišťoval/a péči o uvedené dítě:`,
+caredFor: `O uvedené dítě zemřelý/á pečoval/a`,
+differentParentHandledCare: `Druhý rodič dle mých poznatků zajišťoval péči:`,
+reasonForCare: `Důvod péče o dítě {text} rozsahu`,
+inLesser: "v menším",
+inGreater: "ve větším",
+moreInfoTitle: `Doplňující informace o dětech zemřelého/zemřelé`,
+moreInfoSubtitle: `Pro vyplnění údajů o dětech zemřelého/zemřelé prosím vyplňte druh
+důchodu v sekci Úvod žádosti.`,
+listedChildIs: `Uvedené dítě je:`,
+familyRelation: `Jaký je rodinný vztah zemřelého/zemřelé k dítěti?`,
+specifyRelation: `Specifikujte slovně, jaký je rodinný vztah
+zemřelého/zemřelé k dítěti.`,
+periodsSubtitle: `V následující části vyplňte informace o období, kdy
+zemřelý/zemřelá z důvodu péče o dítě nevykonával/a
+výdělečnou činnost.`,
+periodsSubtitleHint: `Jedná se o informace o dobách péče o dítě, které mohou mít
+význam pro důchodové nároky. Doby uvádějte zvlášť pro každý
+stát, ve kterém se zemřelý/zemřelá o dítě staral/a.`,
+periodsSubtitleHint2: `Položky v tabulce můžete libovolně přidat, upravit nebo
+smazat.`,
+},
+receivingPension: {
+title: "Pobírání důchodu",
+subtitle: `V následující části se vyjádřete k otázkám ohledně důchodů a
+příspěvků. Uveďte pouze důchody, které jsou pobírány od jiných
+plátců než ČSSZ.`,
+receivingFromDiffInstitution: `Pobíráte důchod od jiného českého orgánu sociálního zabezpečení?`,
+receivingPrePension: `Pobíráte předdůchod?`,
+receivingPrePensionHint: `Pobírání předdůchodu je forma čerpání
+finančních prostředků od penzijní
+společnosti naspořených v rámci doplňkového
+penzijního spoření, a to v období před
+dosažením důchodového věku. Doba čerpání
+předdůchodu je považována pro účely výpočtu
+starobního důchodu za vyloučenou dobu, tj.
+za dobu, která nemá negativní vliv na
+výpočet důchodu.`,
+addAnother: "Přidat další důchod",
+receivingAllowance: `Pobíráte výsluhový příspěvek?`,
+payerName: "Název plátce",
+payerNameHint: `Uveďte název plátce důchodu.`,
+identificationNumber: "Identifikační číslo",
+receivingForeign: `Pobíráte důchod z ciziny?`,
+pensionType: "Druh důchodu",
+pensionTypeHint: `Popište co nejpřesněji druh pobíraného důchodu (max.
+délka 120 znaků).`,
+receivingFromWhichForeignState: `Z jakého zahraničního státu jste pobíral/a
+důchod?`,
+receivedUntil: `Do kdy jste pobíral/a důchod?`,
+receivedUntilHint: `Vyplňte přesné datum ve formátu DD.MM.RRRR.`,
+},
+doctor: {
+title: "Údaje o lékaři",
+subtitle: `Zde vyplňte informace o svém ošetřujícím lékaři, u kterého jste
+registrován/a.`,
+moreInfo: "Další informace o lékaři",
+address: `Adresa zdravotnického zařízení lékaře`,
+hasForeignAddress: "Lékař má adresu v zahraničí",
+},
+otherInfo: {
+title: "Ostatní informace",
+declarationShareholderBoardMember: `V době od 1.7.2002 do 31.12.2013 jsem byl/a společníkem obchodní
+společnosti, členem jejího statutárního orgánu nebo její dozorčí
+rady.`,
+declarationStatutaryBody: `V době od 1.1.2009 do 31.12.2013 jsem byl/a členem statutárního
+orgánu družstva.`,
+hasInsolvencyProceedings: `Je u Vás evidováno insolvenční řízení?`,
+enforcementDecisionOrdered: `Byl ve Vašem případě nařízen výkon rozhodnutí?`,
+enforcementDecisionOrderedHint: `Co je výkon rozhodnutí? Výkon rozhodnutí neboli vykonávací
+řízení je druhem civilního řízení, které slouží k vymožení dluhu
+a bylo nařízeno soudem, soudním exekutorem nebo příslušným
+správním orgánem.`,
+payrollDeductions: "Provádí se u vás srážky ze mzdy?",
+payrollDeductionsHint: `Souvisí s výše uvedeným výkonem rozhodnutí.`,
+hasPropertyBankruptcy: `Patříte do okruhu osob, u nichž byl prohlášen konkurz na majetek?`,
+pensionSaving2Pillar: `Patříte mezi osoby, které byly v období let 2013 – 2015 účastny
+důchodového spoření (tzv. II. pilíře důchodového systému)?`,
+startOfSaving: `Kdy jste začal/a spořit?`,
+startOfSavingHint: `Otázka se týká důchového spoření.`,
+savingEnd: `Kdy důchodové spoření skončilo?`,
+employmentTerminatedInvalidly: `Patříte mezi osoby, kterým byl ukončen pracovní poměr neplatně?`,
+provideEmploymentTerminatedInvalidly: `Uveďte, zda u Vás podle rozhodnutí např. soudu došlo k
+neplatnému ukončení pracovního poměru.`,
+provideEmploymentTerminatedInvalidlyHint: `Vyplňte datum neplatného skončení pracovního poměru, název
+zaměstnavatele a kdo vydal rozsudek o neplatném skončení
+pracovního poměru. Nezapomeňte přiložit sken rozsudku pomocí
+tlačítka "Vybrat soubor". Popř. můžete doplnit libovolný text do
+kolonky "Poznámka".`,
+endOfEmploymentDate: `Datum skončení pracovního poměru`,
+extrajudicialOptionOrRehab: `Patříte mezi osoby, kterých se týká možnost soudní/mimosoudní
+rehabilitace nebo odškodnění?`,
+disabled: `Jste těžce zdravotně postižený/á?`,
+disabledDocumentHint: `Doložte své zdravotní postižení přiloženým dokladem
+(např. posudkem, průkazem či lékařským nálezem).`,
+dateToHint: `Pokud je Vám náhrada stále vyplácena, vyberte "Doba
+trvá dosud".`,
+workIncapacityCompensation: `Byla Vám vyplácena náhrada za ztrátu na výdělku po skončení pracovní
+neschopnosti náležející za pracovní úraz (nemoc z povolání) podle
+Zákoníku práce?`,
+certainAboutWorkIncapacity: `Jste přesvědčen, že Vaše invalidita vznikla následkem pracovního
+úrazu?`,
+workInjuryDate: `Uveďte, kdy jste utrpěl tento pracovní úraz a připojte hlášení
+zaměstnavatele ohledně zdravotního úrazu, máte-li k dispozici. Popř.
+doplňte libovolnou poznámku.`,
+},
+incomeActivity: {
+title: "Výdělečná činnost nyní",
+titleFuture: `Výdělečná činnost v budoucnu`,
+subtitle: "Výdělečná činnost",
+currentlyPerforming: `Vykonáváte nyní výdělečnou činnost?`,
+whenEnds: `Kdy skončila nebo skončí Vaše výdělečná činnost?`,
+willPerformAfterPensionPayment: `Budete od data přiznání výplaty důchodu vykonávat
+výdělečnou činnost?`,
+willPerformAs: `Budete ji vykonávat jako:`,
+howWillDocumentBeProvided: `Jak bude doloženo potvrzení o výdělečné
+činnosti?`,
+employedPerson: `zaměstnaná osoba`,
+selfEmployedPerson: `osoba samostatně výdělečně činná`,
+inWhichState: `V jakém státě budete výdělečnou činnost vykonávat?`,
+inCz: `V České republice`,
+inOtherState: `V jiném státě`,
+provideStates: `Uveďte státy, ve kterých budete výdělečnou činnost
+vykonávat`,
+edificationEarlyRetirement: `Poučení o podmínkách nároku na výplatu starobního
+důchodu před dosažením důchodového věku (§ 31 ZDP)
+při výkonu samostatné výdělečné činnosti.`,
+earlyRetirementDeclaration: `Prohlašuji, že v roce přiznání starobního důchodu
+podle § 31 zákona č. 155/1995 Sb. a v následujících
+letech až do dovršení věku nároku na řádný starobní
+důchod, budu samostatnou výdělečnou činnost
+vykonávat v takovém rozsahu, že v mém případě
+nevznikne účast na důchodovém pojištění ve smyslu
+ustanovení § 10 odst. 2 a 3 zákona č. 155/1995 Sb.
+Zároveň prohlašuji, že při výkonu samostatné
+výdělečné činnosti v roce přiznání starobního
+důchodu podle § 31 zákona č. 155/1995 Sb. a v
+následujících letech až do dovršení důchodového
+věku, v mém případě nevznikne účast na důchodovém
+pojištění podle ustanovení § 10 odst. 7 zákona č.
+155/1995 Sb., dle kterého je osoba samostatně
+výdělečně činná v kalendářním roce účastna pojištění
+po dobu, po kterou je poplatníkem v paušálním
+režimu.`,
+howWillDocumentBeProvidedHint: ` Vyberte, zda chcete přiložit potvrzení o výdělečné
+činnosti od zaměstnavatele. Pokud jej nemáte,
+domluvte se se zaměstnavatelem, zda Vám ho vydá nebo
+zašle na ČSSZ. V případě že vyberete možnost "Zašle
+jej zaměstnavatel", nepodávejte žádost, dokud
+nebudete se zaměstnavatelem domluveni. Podrobnosti o
+potvrzení naleznete na
+<a
+href="{link}"
+target="_blank"
+>
+stránkách ČSSZ
+</a>
+.`,
+document: `Potvrzení o výdělečné činnosti`,
+},
+lastIncomeActivity: {
+title: `Poslední výdělečná činnost a jiné zdroje příjmů`,
+titleInvalid: `Poslední výdělečná činnost`,
+titleProbate: "Zaměstnání a výdělečná činnost žadatele/žadatelky",
+absenceOfIncome: "Absence příjmu",
+absenceOfIncomeHint: `Tuto položku můžete vybrat pouze pokud výše neuvedete
+žádný příjem z výdělečné činnosti nebo z jiných zdrojů.`,
+noIncome: `Nemám žádný příjem (z výdělečné činnosti či
+jiné).`,
+noIncomeHint: `Může jít jak o výdělečnou činnost (placené
+zaměstnání i samostatnou výdělečnou činnost),
+tak i o jiný zdroj příjmu(akcie, životní
+pojištění aj.).`,
+subtitle: `Poslední výdělečná činnost`,
+description: `Uveďte do tabulky níže informace o své aktuální či poslední
+výdělečné činnosti, ať již v České republice nebo v cizině. Pokud
+současně vykonáváte více výdělečných činností, uveďte všechny. Pokud
+nyní nejste výdělečně činný/á, můžete uvést informaci o poslední
+činnosti nebo o činnosti, kterou zamýšlíte začít vykonávat. Položky
+v tabulce můžete libovolně přidat, upravit nebo smazat.`,
+employment: "Zaměstnání",
+employmentHint: `Uveďte název posledního zaměstnavatele, popř.
+jeho adresu. V případě, že jde o samostatnou
+výdělečnou činnost, uveďte předmět podnikání.`,
+typeOfEmployment: "Druh zaměstnání",
+typeOfEmploymentHint: `Kdo je považován za odborného pracovníka?
+Odborným pracovníkem se myslí osoba, která
+vykonává výdělečnou činnost vyžadující vysokou
+odbornost nebo činnost podle zvláštních právních
+předpisů a zpravidla i na základě oprávnění
+vydaného příslušnou profesní komorou (např.
+lékař, lékárník, veterinář, notář, advokát
+apod.).`,
+numberOfHoursWeekly: "Počet hodin týdně",
+numberOfHoursWeeklyHint: `Kolik hodin týdně se věnujete výdělečné
+činnosti?`,
+temporalCharacter: "Časový charakter",
+empty: `V přehledu nejsou uvedeny žádné výdělečné činnosti.`,
+addAnother: `Přidat další činnost`,
+deleteConfirm: `Opravdu chcete smazat činnost?`,
+edit: `Upravit poslední výdělečnou činnost`,
+add: `Přidat poslední výdělečnou činnost`,
+incomeGrossAmount: `Hrubá výše příjmu`,
+incomeGrossAmountHint: `Jestliže již byla výdělečná činnost ukončena,
+uveďte hrubou výši posledního sjednaného příjmu.`,
+incomeCurrency: "Měna příjmu",
+dueDate: "Datum splatnosti",
+dueDateHint: "Datum, od něhož náleží příjem v uvedené částce",
+incomeFrequency: "Frekvence příjmu",
+differentFrequency: "Jiná frekvence",
+differentFrequencyHint: `Specifikujte blíže jinou frekvenci plateb Vašeho
+příjmu (např. "jednorázová odměna" bez
+uvozovek).`,
+},
+sourceOfIncome: {
+title: "Jiné zdroje příjmů",
+subtitle: `Pokud máte další zdroje příjmu, které mohou být významné pro nárok
+na Váš zahraniční důchod, uveďte je do následující tabulky. Položky
+v tabulce můžete libovolně přidat, upravit nebo smazat.`,
+type: "Druh jiných zdrojů",
+amount: "Výše příjmů",
+currency: "Měna příjmu",
+amountDueFrom: "Částka splatná od",
+paymentFrequency: "Frekvence plateb",
+empty: ` V přehledu nejsou uvedeny žádny zdroje příjmu.`,
+addAnother: `Přidat další zdroj příjmu`,
+deleteConfirmation: `Opravdu chcete smazat zdroj příjmu?`,
+edit: `Upravit zdroj příjmu`,
+add: "Přidat další zdroj příjmu",
+incomeType: "Druh jiných příjmů",
+incomeTypeHint: `Komerční pojištění zahrnuje např. životní, penzijní
+či úrazové pojištění. ostatni příjmy obnáší
+stipendium, výživné apod.`,
+incomeGrossAmountHint: `Jestliže z uvedeného zdroje již aktuálně žádný
+příjem nemáte, uveďte hrubou výši posledního příjmu
+z tohoto zdroje. Uvádí se nezdaněná výše, nekrácená
+o příspěvky na sociální zabezpečení apod.`,
+},
+benefits: {
+title: "Dávky",
+titleProbate: "Dávky žadatele/žadatelky",
+subtitle: `Informace o jiných dávkách sociálního zabezpečení`,
+description: `Uveďte do tabulky níže informace o každé své dávce, ať již v
+České republice nebo v zahraničí, kterou pobíráte, pobíral/a
+jste nebo o kterou jste zažádal/a. Pokud pobíráte více dávek,
+uveďte všechny. Neuvádí se důchodové dávky, které požadujete v
+tomto online podání. Položky v tabulce můžete libovolně přidat,
+upravit nebo smazat.`,
+entitledToSicknessBenefits: `Máte nárok na věcné dávky v nemoci?`,
+entitledToSicknessBenefitsHint: `Jste-li v České republice zdravotně pojištěn/a,
+vyberte Ano.`,
+appliedForCareAllowance: `Žádal/a jste o příspěvek na péči?`,
+appliedForCareAllowanceHint: `Jde o dávku v souvislosti s asistencí jiné osoby.`,
+werePaidDueToInjuryOrIllness: `Byly Vám vypláceny dávky nebo vyrovnání jednorázovou
+částkou z důvodu nemoci z povolání a pracovních
+úrazů?`,
+werePaidDueToInjuryOrIllnessHint: `Vyberte, zda Vám je poskytováno (nebo bylo
+jednorázově poskytnuto) plnění v souvislosti s
+pracovním úrazem či nemocí z povolání, ať již v ČR
+nebo v cizině. V ČR jde o nároky zaměstnance v
+souvislosti s odpovědností zaměstnavatele za škodu a
+nemajetkovou újmu vzniklou pracovním úrazem nebo
+nemocí z povolání.`,
+benefitsComeFromLevies: `Vychází tyto dávky nebo vyrovnání jednorázovou
+částkou zcela z Vašich odvodů?`,
+benefitsComeFromLeviesHint: `Pokud by se jednalo o plnění ze systému úrazového
+pojištění, do kterého přispívate i Vy, vyberte "Ne".`,
+compensationSettledLumpSump: `Byla Vám náhrada důchodu vyrovnána jednorázovou částkou?`,
+provideInstitution: `Uveďte název instituce, která Vám dávku nebo
+náhradu poskytla?`,
+personalIdentificationNumberHint: `Uveďte, pod jakým osobním identifikačním
+číslem Vám instituce dávu vyplácí (pokud jej
+znáte).`,
+payedFromWhichState: `Ze kterého státu je dávka vyplácena?`,
+payerFromWhichInstitution: `Z jaké instituce je dávka vyplácena?`,
+yearOfCompensationPayment: "Rok platby náhrady",
+dateOfPayment: "Počáteční datum výplaty dávek",
+dateOfPaymentHint: `Uveďte datum, od kterého Vám náleží uvedené
+plnění.`,
+dateOfTermination: `Datum zániku nároku na dávky`,
+dateOfTerminationHint: `Pokud k zániku dávky nedošlo, ponechte kolonku
+nevyplněnou. Musí být pozdější než předchozí datum.`,
+endDateOfPayment: "Konečné datum výplaty dávek",
+endDateOfPaymentHint: `Uveďte datum, kdy Vám byla vyplácena
+poslední dávka plnění. Pokud je Vám dávka
+stále vyplácena, zaškrtněte "Trvá dosud".
+Musí být pozdější než předchozí
+datum.`,
+stillLasts: "Trvá dosud",
+insuredInCz: "Jste zdravotně pojištěn v České republice?",
+insuredInCzHint: `Jste-li v České republice zdravotně pojištěn/a,
+vyberte Ano.`,
+type: "Druh dávky",
+differentType: "Jiná dávka",
+differentTypeHint: `Uveďte, jakou dávku pobíráte.`,
+stateOfBenefit: "Stav dávky",
+stateOfBenefitHint: `Vyberte, zda jste o dávku zatím jen zažádal/a
+("požadována"), zda již bylo rozhodnuto kladně
+("přiznána") nebo záporně ("zamítnuta"). Byla-li Vám
+dávka přiznána v prozatímní výši či zálohově,
+vyberte "prozatímní". U zamítnutých dávek stačí
+uvést dávky z posledních 3 let.`,
+institutionName: "Název instituce",
+dateOfEntitlement: "Datum vzniku nároku",
+empty: `V přehledu nejsou uvedeny žádné dávky.`,
+add: `Přidat dávku`,
+addAnother: `Přidat další dávku`,
+edit: `Upravit dávku`,
+editAdded: "Upravit přidanou dávku",
+delete: "Smazat přidanou dávku",
+deleteConfirmation: "Opravdu chcete smazat uvedenou dávku?",
+personalIdentificationNumberHint2: `Uveďte, pod jakým osobním identifikačním číslem Vám
+instituce dávku vyplácí (pokud jej znáte). V případě
+ČSSZ jde o Vaše rodné číslo, popř. evidenční číslo
+pojištěnce.`,
+caseNumber: "Číslo případu",
+caseNumberHint: `Uveďte číslo případu nebo číslo jednací, pod nímž je
+Vám dávka vyplácena (pokud jej znáte). V případě
+ČSSZ opět uveďte pouze Vaše rodné číslo, popř.
+evidenční číslo pojištěnce.`,
+dateOfEntitlementBenefit: "Datum vzniku nároku na dávky",
+endDateOfPaymentHint2: `Pokud je Vám dávka stále vyplácena, ponechte kolonku
+nevyplněnou. Musí být pozdější než předchozí datum.`,
+amount: "Výše dávky",
+amountHint: `Uveďte aktuální výši dávky v číselné formě (např.
+"800.5","5500","1200000" bez uvozovek).`,
+currency: "Měna dávky",
+startDate: `Datum počátku dávky`,
+frequency: `Frekvence dávky`,
+},
+selfemployment: {
+title: "Samostatná výdělečná činnost",
+wereOrWillBe: `Byl/a jste, jste nebo budete osobou samostatně výdělečně
+činnou?`,
+wereOrWillBeDisability: `Byl/a jste nebo jste osobou samostatně výdělečně činnou?`,
+currentlyPerforming: `Vykonáváte nyní samostatnou výdělečnou činnost?`,
+whenEnds: `Kdy skončila nebo skončí Vaše samostatná výdělečná
+činnost?`,
+willPerformAfterPensionPayment: `Budete od data přiznání výplaty důchodu vykonávat
+samostatnou výdělečnou činnost?`,
+declareForYear: `Prohlašuji, že v mém případě za rok {text} daňové přiznání`,
+wasSubmittedDigitally: `bylo/bude podáno elektronicky po 1.4.`,
+wasSubmittedWithTaxAdvisor: `bylo/bude podáno v zastoupení daňovým poradcem
+či advokátem po 1.4.`,
+},
+declaration: {
+declareAwareOfObligation: `Prohlašuji, že jsem si vědom/a povinnosti
+písemně hlásit plátci důchodu do 8 dnů
+skutečnosti rozhodné pro trvání nároku na dávku,
+její výši a výplatu nebo poskytování.`,
+declareDataProvidedByTheTruth: `Prohlašuji, že jsem veškeré údaje uvedl/a podle
+pravdy. Jsem si vědom/a, že uvedení nepravdivých
+skutečností může mít za následek nejen povinnost
+vrátit neprávem vyplacené částky, ale i trestní
+stíhání. Současně potvrzuji správnost údajů
+uvedených v žádosti.`,
+requestForCoop: `Žádost o součinnost a výzva k předložení podkladů.`,
+declareAwareCooperationAndDocuments: `Prohlašuji, že jsem se seznámil/a s výše
+uvedenou žádostí o součinnosti a výzvou k
+předložení podkladů.`,
+applicationProcessing: `Zpracování žádosti`,
+yourApplicationWillProcess: `Vaši žádost bude zpracovávat `,
+requestOtherOsszToProcess: `Přeji si, aby moji žádost zpracovávala jiná
+OSSZ/PSSZ/MSSZ`,
+requestOtherOsszToProcessHint: `ČSSZ a OSSZ/PSSZ/MSSZ Brno vyžaduje a zpracovává
+osobní údaje v souladu s právními předpisy pro
+ochranu osobních údajů a pouze k legitimním účelům.
+Více informací naleznete na `,
+ossszPssszMssz: `OSSZ/PSSZ/MSSZ`,
+forTheMedicalExam: `ke zjišťovací lékařské prohlídce žadatele o invalidní důchod`,
+dearSirMadam: `Vážený pane, vážená paní`,
+youAppliedForDisabilityPensionToday: `dnešního dne jste uplatnil/a žádost o invalidní
+důchod.`,
+questionOfDisability: `Posuzování otázky Vaší invalidity přísluší podle ustanovení
+§ 8 zákona č. 582/1991 Sb., o organizaci a provádění
+sociálního zabezpečení, ve znění pozdějších předpisů,
+pověřenému pracovníkovi lékařské posudkové služby (LPS)
+okresní správy sociálního zabezpečení (OSSZ).`,
+forPurposeEnsureFollowing: `Za tím účelem je třeba zajistit z Vaší strany následující:`,
+forPurposeEnsureFollowingItem: `Nejdříve 3. pracovní den od sepsání žádosti a nejpozději
+do 8 pracovních dnů kontaktujte svého lékaře, kterého
+jste uvedl/a při sepisování žádosti, s dotazem, zda bude
+třeba se k němu dostavit na provedení vyšetření.<br />
+Pokud disponujete lékařskými nálezy od lékařů –
+specialistů, či od jiných lékařů (hospitalizace,
+urgentní ošetření), vezměte tyto nálezy s sebou a
+předložte je Vašemu lékaři nebo je nejpozději do 20
+kalendářních dnů od dnešního dne doručte na oddělení LPS
+příslušné OSSZ. K podkladům předloženým po uplynutí
+stanovené lhůty se nepřihlíží. V odůvodněných případech
+lze zmeškání stanovené lhůty prominout - v takovém
+případě je třeba současně s žádostí o prominutí zmeškání
+lhůty, ve které budou uvedeny důvody zmeškání lhůty,
+předložit požadované podklady.`,
+forPurposeEnsureFollowingItem2: `Po Vašem případném vyšetření lékař vyplní předepsaný
+formulář a společně s podkladovou dokumentací vše zašle
+na příslušnou OSSZ, kde Váš zdravotní stav posoudí
+pověřený pracovník LPS.`,
+forPurposeEnsureFollowingItem3: `Pokud oddělení LPS disponuje dostatečnou podkladovou
+dokumentací, na základě které je možné zdravotní stav
+posoudit, nebude vyšetření od lékaře vyžadováno;`,
+forPurposeEnsureFollowingItem4: `V záležitostech posouzení zdravotního stavu se obracejte
+vždy na oddělení LPS příslušné OSSZ. V případě, že se ze
+závažných důvodů nemůžete dostavit k vyšetření zdravotního
+stavu osobně nebo nemáte k dispozici aktuální lékařskou
+zprávu, sdělte, prosím, tuto skutečnost neprodleně Vašemu
+ošetřujícímu lékaři či na oddělení LPS.`,
+forPurposeEnsureFollowingItem5: `Pro posouzení zdravotního stavu je nutné ve stanovené lhůtě
+doložit Profesní a sebehodnotící dotazník, pokud tak již
+nebylo učiněno.`,
+send: `Odeslat žádost`,
+sendMessage: `Žádost bude odeslána ke zpracování na OSSZ.
+Zvolte odeslat v případě,
+že jste vše dostatečně vyplnili a zkontrolovali.
+V opačném případně se vraťte zpět k žádosti.`,
+noRecordFound: `Žádný záznam nenalezen`,
+thanksForSubmit: `Děkujeme za podání žádosti o důchod.`,
+applicationSent: `Žádost o důchod byla odeslána`,
+applicationSentForProcessing: `Vaše žádost byla odeslána ke zpracování.`,
+decisionWillBeIssued: `O Vaší žádosti bude vydáno rozhodnutí, které Vám bude zasláno
+buď do datové schránky nebo na uvedenou doručovací adresu. V
+případě nejasností Vás kontaktuje referent příslušné okresní
+správy sociálního zabezpečení.`,
+youCanViewApplicationAt: `Žádost si můžete prohlédnout nebo vytisknout v sekci ePortálu `,
+printRequest: `Vytisknout žádost`,
+},
+unemployment: {
+title: `Podpora v nezaměstnanosti a pracovní neschopnost`,
+titleInvalid: "Pracovní neschopnost",
+receivingBenefits: `Je Vám nyní vyplácena podpora v nezaměstnanosti?`,
+receivingBenefitsEnd: `Kdy bude vyplácení podpory ukončeno?`,
+currentlyWorkDisabled: `Jste nyní v dočasné pracovní neschopnosti?`,
+workDisabilityStart: `Kdy začala Vaše dočasná pracovní neschopnost?`,
+},
+insuranceStates: {
+empty: `V přehledu nejsou uvedeny žádné státy.`,
+},
+representative: {
+title: `Zástupce žadatele/žadatelky`,
+personalInfo: `Osobní informace o zástupci`,
+scope: `Rozsah zastoupení`,
+status: `Status zástupce`,
+forEntierProcedure: `Pro celé řízení`,
+forSubmittingApplication: "Pro sepsání žádosti",
+addresses: "Adresy",
+},
+questionnaire: {
+education: "Vzdělání a kvalifikace",
+addAnother: "Přidat další",
+professionalKnowledge: "Odborné znalosti a dovednosti",
+courseOfProfessions: `Průběh vykonávaných profesí`,
+currentEmployment: "Zaměstnání v současnosti",
+typeOfEducation: "Typ vzdělání",
+typeOfSchoolField: "Druh školy, obor, odbornost",
+ongoingStudy: "Studium stále trvá",
+testType: "Druh zkoušky",
+studyFailed: "Studium nebylo úspěšně dokončeno",
+provideProfessionalKnowledge: `Uveďte odborné znalosti a dovednosti (práce s počítačem,
+řidičský průkaz, jazykové znalosti, státní zkoušky)`,
+currentlyEmployed: "Jste v současnosti zaměstnán?",
+currentEmployer: "Současný zaměstnavatel",
+employmentDepartment: "Úřad práce",
+currentProfession: "Současná profese",
+professionStartDate: "Datum zahájení profese",
+jobDescription: "Popis vykonávané práce",
+selectPhysicalDemand: "Vyberte fyzickou náročnost práce",
+selectMentalDemand: "Vyberte psychickou náročnost práce",
+selectEmploymentOperationType: "Vyberte druh provozu zaměstnání",
+workingHours: "Úvazek",
+ambulanceVisitInfo:
+"Informace o návštěvách specializované ambulance",
+healthCareProviderName: "Název poskytovatele zdravotních služeb",
+doctorBasicInfo: "Základní údaje lékaře",
+doctorExpertise: "Další informace (Odbornost lékaře)",
+doctorAddress: "Adresa lékaře",
+doctorHasForeignAddress: "Lékař má adresu v zahraničí",
+addAnotherDoctor: "Přidat dalšího lékaře",
+doctorVisits: "Návštěvy lékaře",
+dateOflastVisit: "Datum poslední návštěvy",
+dateOfNextVisit: "Datum další kontroly",
+statementOnWorkAbility: `Vyjádření žadatele k pracovní schopnosti v souvislosti se zdravotním
+stavem`,
+currentlyTakingMeds: "Užíváte v současné době nějaké léky?",
+provideUsedMeds: `Uveďte v současnosti užívané léky`,
+sightOrHearingIssues: `Vyskytují se u Vás potíže se zrakem/sluchem?`,
+specifyHowIssuesAffectWork: `Uveďte jak Vás tyto potíže omezují v pracovní
+schopnosti`,
+fromWhenUnableToWork: `Od kdy se cítíte být omezený či neschopný k práci a proč?`,
+specifyWhyUnableToWork: `Uveďte důvod, proč se cítíte být omezený či neschopný k
+práci`,
+isSane: `Považujete svůj duševní stav za vyrovnaný?`,
+specifyHowMentalStateAffectsWork: `Uveďte jak Vás omezuje duševní stav v pracovní
+neschopnosti`,
+havingMovementDifficulties: `Máte v současné době pohybové obtíže, které Vás omezují v pracovní
+schopnosti?`,
+injuryAfterSurgery: `Trpíte trvalými následky po úrazu či operaci, které zůstaly i po
+ukončení léčby (chronické poruchy)?`,
+accidentConsequences: "Následky úrazu",
+causeOfInjury: "Příčina úrazu",
+injuryDate: "Datum úrazu",
+endOfTreatmentDate: "Datum ukončení léčby",
+whatWasOperated: "Co bylo operováno?",
+surgeryDate: "Datum operace",
+mainCauseOfWorkLimitation: `Jakou konkrétní poruchu svého zdraví považujete za hlavní příčinu svého
+pracovního omezení, nebo pracovní neschopnosti?`,
+specifyMainCause: `Uveďte hlavní příčinu`,
+howSpecificallyHealthProblemsAffectWork: `Jak konkrétně Vás v práci zdravotní potíže omezují?`,
+specifyHowHealthProblemsAffectWork: `Uveďte jak Vás v práci Vaše zdravotní potíže omezují`,
+plantoChangeWorkDueToHealth: `Máte ze zdravotních důvodů v plánu změnit práci nebo snížit úvazek?`,
+profession: "Profese",
+professionEndDate: "Datum ukončení profese",
+empty: `V přehledu nejsou uvedeny žádné profese.`,
+addAnotherProfession: `Přidat další profesi`,
+editAddedProfession: "Upravit přidanou profesi",
+deleteAddedProfession: "Smazat přidanou profesi",
+deleteConfirm: "Opravdu chcete smazat uvedenou profesi?",
+editProfession: "Upravit profesi",
+addProfession: "Přidat další profesi",
+},
+note: {
+title: "Poznámka",
+subtitle: `Uveďte jakékoliv další údaje či informace nebo připojte další
+soubory.`,
+fileUploadHint: `Pomocí tlačítka "Vybrat soubor" připojte další soubor.`,
+},
+applicationList: {
+title: "Žádost o důchod online",
+appDescription: `Aplikace Vám umožní podat elektronicky žádost o starobní,
+invalidní nebo pozůstalostní důchod, a to jak v ČR, tak v
+zahraničí. Rozpracované žádosti jsou zobrazeny níže v
+seznamu rozpracovaných žádostí`,
+findApplicationsInSection: `Žádosti, které budou v rámci Žádost o důchod online podány,
+najdete v sekci`,
+mySubmissions: `Moje podání`,
+gdpr: `GDPR - Informace o zpracování osobních údajů`,
+create: "Založit novou žádost",
+subtitle: `V seznamu rozpracovaných žádostí naleznete žádosti o důchod,
+které jste pomocí aplikace Žádost o důchod online vytvořil/a,
+ale zatím jste je neodeslal/a.`,
+listOfApplications: `Seznam rozpracovaných žádostí`,
+headerType: "Typ",
+headerCreatedAt: "Datum a čas vytvoření",
+headerUpdatedAt: "Datum a čas poslední změny",
+noData: "Prozatím nebyly vytvořeny žádné žádosti.",
+},
+wizard: {
+closeRequestInProgress: "Chystáte se ukončit rozpracovanou žádost!",
+changesWillBeLost:
+"Pokud si žádost neuložíte, provedené změny budou ztraceny.",
+applicationInProgressAvailable: `Rozpracovanou žádost budete mít po uložení k dispozici v
+přehledu žádostí.`,
+saveConfirmation: `Přejete si žádost uložit?`,
+goToApplicationList: `Opravdu chcete přejít na seznam žádostí?`,
+buttonHint:
+"Smaže vše, co jste editoval/a či vepisoval/a v celé žádosti nebo na Vámi vybraném oddílu a doplní se původní údaje.",
+stepNotAvailable: `Krok {text} průvodce není dostupný!`,
+activateThisStep:
+"Aktivujte tento krok, abyste mohl/a použít průvodce chybami tímto krokem.",
+},
+messages: {
+printError: "Došlo k chybě při tisku žádosti o důchod.",
+applicationSavedSuccessfully: "Žádost byla úspěšně uložena.",
+deleteConfirmation: "Chcete opravdu odstranit žádost?",
+existingApplication:
+"Máte rozpracovanou jinou žádost o pozůstalostní důchod. Skutečně si přejete pokračovat ve vyplnění nové žádosti?",
+},
+validation: {
+pickAnotherState: "Vyberte další smluvní stát.",
+atLeastOneForeignState: `Přidejte alespoň jeden stát v zahraničí, ve kterých jste byl/a pojištěn/a.`,
+emptyInsurancePeriods: `V přehledu dob důchodového pojištění zůstaly prázdné intervaly, ke kterým jste se zatím nevyjádřil/a.
+Tyto prázdné intervaly jsou vyznačeny žlutou barvou. Doplňte k těmto intervalům dobu, nebo u těchto intervalů uveďte, že je nedokládáte/nepožadujete.`,
+onlyNumbersOrSpaces:
+"Hodnota musí obsahovat pouze číslice nebo mezery.",
+dataBox: `Hodnota musí být platný identifikátor datové schránky.`,
+pin: `Hodnota musí být platné rodné číslo nebo evidenční číslo pojištěnce.`,
+psc: `Hodnota musí být platné existující PSČ.`,
+bankAccount: "Hodnota musí být platné číslo účtu",
+nonLiteralCharacters:
+"Nepísmenné znaky lze zapisovat pouze mezi písmeny",
+bicSwift: "Hodnota musí být platné BIC/SWIFT",
+iban: "Hodnota musí být platné IBAN",
+atLeastOneItemRequired: "Musí být vybrána alespoň jedna z položek",
+title: "Délka hodnot položek Titul před jménem a Titul za jménem může být maximálně 8 znaků",
+},
+attachments: {
+inputAriaLabel: "Vstup pro nahrání souborů",
+inputLabel: "Vybrat soubor",
+},
+success: {
+ulozZadostAutomaticky: "Žádost byla automaticky uložena.",
+},
+error: {
+nactiZadost: "Došlo k chybě při načítání žádosti.",
+nactiZadosti: "Došlo k chybě při načítání žádostí.",
+predvyplnZadost: "Došlo k chybě při předvyplnění žádosti.",
+ulozZadost: "Došlo k chybě při ukládání žádosti.",
+vymazZadost: "Došlo k chybě při mazání žádosti.",
+detail: "Zkuste to prosím později.",
+odesliZadost: "Došlo k chybě při odeslání žádosti.",
+tiskPdf: "Došlo k chybě při tisku žádosti do PDF.",
+nactiOssz: "Došlo k chybě při načítání OSSZ.",
+calculation: "Došlo k při informativním výpočtu důchodu.",
+},
+evaluation: {
+// TODO '@'
+outcomeBasedOnData: `Výsledek výpočtu nároku na starobní důchod dle získaných dat`,
+titleOldAge: "Informativní vyhodnocení nároku na starobní důchod",
+title: "Informativní vyhodnocení nároku na důchod",
+subtitle: `Informativní vyhodnocení nároku na důchod Vám pomůže zjistit, zda
+splňujete podmínky pro nárok na starobní důchod. Splnění podmínek
+závisí na získaných dobách pojištění v České republice i v
+zahraničí, Vašem věku a na počtu vychovaných dětí.`,
+cannotEvaluate: "nelze vypočítat",
+notEvaluated: "neproveden",
+reevaluating: "Přepočítává se ...",
+details: "Podrobnosti výpočtu",
+hint: "Nápověda k vyhodnocení nároku na důchod?",
+hintDetail: `Pokud patříte do skupiny pojištěnců, pro které platí vzhledem k
+výkonu specifického zaměstnání snížený důchodový věk (např. horníci,
+zdravotničtí záchranáři nebo členové jednotek hasičského záchranného
+sboru podniku), mohou se podmínky pro nárok na starobní důchod lišit
+oproti zobrazenému vyhodnocení. Jestliže si nejste jisti, zda se na
+Vás snížený důchodový věk vztahuje, ale přejete si přiznat důchod
+již ode dne vzniku nároku, doporučujeme uvést jako požadované datum
+přiznání důchodu „Od vzniku nároku“. V případě této volby je ČSSZ
+povinna důchod posoudit a přiznat právě k nejdříve možnému datu.`,
+eligibleForEarlyRetirement:
+"Domníváte se, že patříte do skupiny pojištěnců, kteří mají nárok na dřívější odchod do důchodu?",
+resultSuccess:
+"Splňujete podmínky pro nárok na řádný starobní důchod.",
+resultWarning:
+"K dnešnímu dni prozatím nesplňujete podmínky pro nárok na starobní důchod.",
+resultFailure: "Nesplňujete podmínky pro nárok na starobní důchod.",
+summaryHint: `Žádost o starobní důchod je možné podat nejdříve čtyři měsíce před požadovaným dnem přiznání důchodu.
+Později je to možné kdykoliv. U předčasného starobního důchodu však platí, že jej nelze přiznat zpětně,
+ale nejdříve od data podání žádosti.`,
+howToAchievePension:
+"Jak dosáhnout správného vyhodnocení nároku na důchod?",
+howToAchieveItem: `Vyplňte správný počet vychovaných dětí. Vychování dětí
+ovlivňuje výši důchodu a u žen i datum dosažení důchodového
+věku.`,
+howToAchieveItem2: `V přehledu zhodnocených dob pojištění zkontrolujte, upravte
+nebo doplňte všechny Vaše získané doby pojištění.`,
+outcomeOfSection: `Co je výstupem oddílu "Informativního vyhodnocení nároku na
+důchod"?`,
+outcomeOfSectionItem: `Informace o Vašem nároku na starobní důchod.`,
+outcomeOfSectionItem2: `Informativní odhad výše důchodu.`,
+retirementAgeAchievementDate: `Datum dosažení důchodového věku`,
+remainingTimeTo35Years: "Kolik doby do potřebných 35 let zbývá",
+estimatedPensionAmount: "Odhad výše starobního důchodu",
+unableToCalculate: `K datu vzniku nároku nebylo možné provést informativní
+vyhodnocení nároku na starobní důchod. Zkontrolujte, zda
+přehled zhodnocených dob pojištění obsahuje veškeré
+informace o všech Vašich dobách.`,
+periodsHint: `Doby pojištění můžete zkontrolovat a případně doplnit v oddílu "Přehled dob důchodového pojištění".`,
+resultType1: `Ke dni {text} jste dosáhl/a důchodového věku a splnil/a
+jste podmínky pro nárok na starobní důchod. Z provedeného vyhodnocení dob pojištění evidovaných
+{'@'}ČSSZ{'@'} vyplývá, že jste získal/a alespoň 35 let pojištění nebo 30 let čisté doby pojištění.`,
+
+resultType2: `Ke dni {text} jste dosáhl/a důchodového věku a splnil/a
+jste podmínky pro nárok na starobní důchod.  Z provedeného vyhodnocení dob pojištění
+evidovaných {'@'}ČSSZ{'@'} vyplývá, že jste získal/a potřebnou dobu pojištění.`,
+resultType3: `Ke dni {text} jste ste nedosáhl/a důchodového věku,
+proto nejsou splněny podmínky pro nárok na starobní důchod.
+Z provedeného vyhodnocení dob pojištění evidovaných {'@'}ČSSZ{'@'} vyplývá,
+že jste získal/a potřebnou dobu pojištění.`,
+resultType4: `Ke dni {text} jste nedosáhl/a důchodového věku,
+proto nejsou splněny podmínky pro nárok na starobní důchod. K tomuto
+dni jste dosáhl/a alespoň věku pro přiznání předčasného starobního důchodu.
+Z provedeného vyhodnocení dob pojištění evidovaných {'@'}ČSSZ{'@'} vyplývá,
+že jste získal/a alespoň 35 let pojištění nebo 30 let čisté doby pojištění.`,
+resultType5: `Ke dni {text} jste nedosáhl/a důchodového věku,
+proto nejsou splněny podmínky pro nárok na starobní důchod.
+Z provedeného vyhodnocení dob pojištění evidovaných {'@'}ČSSZ{'@'} vyplývá,
+že jste získal/a alespoň 35 let pojištění nebo 30 let čisté doby pojištění.`,
+
+resultType6: `Ke dni {text}  jste dosáhl/a důchodového věku, avšak
+nejsou splněny podmínky pro nárok na starobní důchod.
+Z provedeného vyhodnocení dob pojištění evidovaných ČSSZ vyplývá, že jste dosud
+nezískal/a alespoň 35 let pojištění nebo 30 let čisté doby pojištění potřebné
+pro nárok na starobní důchod. Pokud podmínku získání doby splníte kdykoliv po
+dosažení důchodového věku, pak Vám tímto dnem vznikne nárok na starobní důchod.
+Doposud získaná doba postačuje pro vznik nároku na starobní důchod ode dne `,
+
+resultType7: `Ke dni {text} jste dosáhl/a důchodového věku, avšak
+nejsou splněny podmínky pro nárok na starobní důchod. Z provedeného vyhodnocení
+dob pojištění evidovaných ČSSZ vyplývá, že jste dosud nezískal/a dobu pojištění potřebnou
+pro nárok na starobní důchod. Pokud podmínku získání doby splníte kdykoliv po dosažení důchodového
+věku, pak Vám tímto dnem vznikne nárok na starobní důchod.
+Doposud získaná doba postačuje pro vznik nároku na starobní důchod ode dne`,
+
+resultType8: `Ke dni {text} jste nedosáhl/a důchodového věku a nejsou
+splněny podmínky pro nárok na starobní důchod. Z provedeného vyhodnocení dob pojištění
+evidovaných ČSSZ vyplývá, že jste dosud nezískal/a alespoň 35 let pojištění nebo 30 let čisté doby pojištění potřebné pro nárok na starobní důchod.`,
+
+resultType9: `Ke dni {text} jste nedosáhl/a důchodového věku a nejsou
+splněny podmínky pro nárok na starobní důchod.
+Z provedeného vyhodnocení dob pojištění evidovaných ČSSZ vyplývá, že jste dosud
+nezískal/a dobu pojištění potřebnou pro nárok na starobní důchod.`,
+
+resultType10: `Ke dni {text} jste nedosáhl/a důchodového věku
+a nejsou ani splněny podmínky pro nárok na starobní důchod. Z provedeného
+vyhodnocení dob pojištění evidovaných ČSSZ vyplývá, že jste dosud nezískal/a
+alespoň 35 let pojištění nebo 30 let čisté doby pojištění a tuto dobu potřebnou
+pro nárok na starobní důchod pravděpodobně nezískáte ani k datu dosažení svého důchodového věku.
+Pokud podmínku získání doby 35 let pojištění nebo 30 let čisté doby pojištění  splníte kdykoliv
+po dosažení důchodového věku, pak Vám tímto dnem vznikne nárok na starobní důchod.  Doposud získaná
+doba postačuje pro vznik nároku na starobní důchod ode dne `,
+
+resultType11: `Ke dni {text} jste nedosáhl/a důchodového věku
+a nejsou ani splněny podmínky pro nárok na starobní důchod. Z provedeného
+vyhodnocení dob pojištění evidovaných ČSSZ vyplývá, že jste dosud nezískal/a
+dobu pojištění potřebnou  pro nárok na starobní důchod. Pokud podmínku získání
+doby splníte kdykoliv po dosažení důchodového věku, pak Vám tímto dnem vznikne nárok na starobní důchod.
+Doposud získaná doba postačuje pro vznik nároku na starobní důchod ode dne `,
+
+resultType12: `Ke dni {text} jste dosáhl/a důchodového věku,
+avšak nejsou splněny podmínky pro nárok na starobní důchod. Z
+provedeného vyhodnocení dob pojištění evidovaných ČSSZ vyplývá,
+že jste dosud nezískal/a alespoň 35 let pojištění nebo 30 let čisté doby
+pojištění potřebné pro nárok na starobní důchod. Nárok na starobní důchod
+však můžete získat také ode dne `,
+
+resultType13: `Ke dni {text} jste dosáhl/a důchodového věku,
+avšak nejsou splněny podmínky pro nárok na starobní důchod. Z provedeného
+vyhodnocení dob pojištění evidovaných ČSSZ vyplývá, že jste dosud nezískal/a dobu
+pojištění potřebnou  pro nárok na starobní důchod. Pokud podmínku získání doby splníte
+kdykoliv po dosažení důchodového věku, pak Vám tímto dnem vznikne nárok na starobní důchod.
+Doposud získaná doba postačuje pro vznik nároku na starobní důchod ode dne `,
+
+resultType14: `Ke dni {text} jste nedosáhl/a důchodového věku a
+nejsou ani splněny podmínky pro nárok na starobní důchod. Z provedeného
+vyhodnocení dob pojištění evidovaných ČSSZ vyplývá, že jste dosud nezískal/a
+alespoň 35 let pojištění nebo 30 let čisté doby pojištění a tuto dobu potřebnou
+pro nárok na starobní důchod pravděpodobně nezískáte ani k datu dosažení svého důchodového věku.
+Nárok na starobní důchod však můžete získat také ode dne `,
+
+resultType15: `Ke dni {text} jste nedosáhl/a důchodového věku a nejsou ani
+splněny podmínky pro nárok na starobní důchod. Z provedeného vyhodnocení dob pojištění
+evidovaných ČSSZ vyplývá, že jste dosud nezískal/a potřebnou dobu pojištění a tuto dobu
+potřebnou pro nárok na starobní důchod pravděpodobně nezískáte ani k datu dosažení svého důchodového věku.
+Nárok na starobní důchod však můžete získat také ode dne `,
+
+resultType16: `Ke dni {text} jste
+dosáhl/a důchodového věku, avšak nejsou splněny podmínky
+pro nárok na starobní důchod. Z provedeného vyhodnocení
+dob pojištění evidovaných {'@'}ČSSZ{'@'} vyplývá, že jste dosud
+nezískal/a alespoň 35 let pojištění potřebného pro nárok
+na starobní důchod. Nárok na starobní důchod však můžete
+získat také ode dne
+<strong class="text-nowrap">{value1}</strong
+>, pokud získáte ještě
+<strong class="text-nowrap">{value2}</strong>
+pojištění a nebo
+<strong class="text-nowrap">{value3}</strong>
+bez náhradních dob pojištění (tj. bez doby evidence na
+ÚP, studia, péče o dítě/osobu závislou, vojenské nebo
+civilní služby, pobírání invalidního důchodu pro
+invaliditu třetího stupně).`,
+
+resultType17: `Ke dni {text} jste
+dosáhl/a důchodového věku, avšak nejsou splněny podmínky
+pro nárok na starobní důchod. Z provedeného vyhodnocení
+dob pojištění evidovaných {'@'}ČSSZ{'@'} vyplývá, že jste dosud
+nezískal/a potřebnou dobu pojištění pro nárok na
+starobní důchod. Nárok na starobní důchod však můžete
+získat také ode dne
+<strong class="text-nowrap">{value}</strong
+>, pokud získáte ještě
+<strong class="text-nowrap">{value2}</strong>
+pojištění a nebo
+<strong class="text-nowrap">{value3}</strong>
+bez náhradních dob pojištění (tj. bez doby evidence na
+ÚP, studia, péče o dítě/osobu závislou, vojenské nebo
+civilní služby, pobírání invalidního důchodu pro
+invaliditu třetího stupně).`,
+
+resultType18: `Ke dni {text} jste
+dosáhl/a důchodového věku, avšak nejsou splněny podmínky
+pro nárok na starobní důchod. Z provedeného vyhodnocení
+dob pojištění evidovaných {'@'}ČSSZ{'@'} vyplývá, že jste dosud
+nezískal/a alespoň 35 let pojištění potřebného pro nárok
+na starobní důchod. Nárok na starobní důchod však můžete
+získat také ode dne
+<strong class="text-nowrap">{value}</strong
+>, pokud získáte ještě
+<strong class="text-nowrap">{value2}</strong>
+pojištění.`,
+
+resultType19: `Ke dni {text} jste
+dosáhl/a důchodového věku, avšak nejsou splněny podmínky
+pro nárok na starobní důchod. Z provedeného vyhodnocení
+dob pojištění evidovaných {'@'}ČSSZ{'@'} vyplývá, že jste dosud
+nezískal/a potřebnou dobu pojištění pro nárok na
+starobní důchod. Nárok na starobní důchod však můžete
+získat také ode dne
+<strong class="text-nowrap">{value}</strong
+>, pokud získáte ještě
+<strong class="text-nowrap">{value2}</strong>
+pojištění.`,
+
+resultType20: `Ke dni {text} jste
+nedosáhl/a důchodového věku a nejsou ani splněny
+podmínky pro nárok na starobní důchod. Z provedeného
+vyhodnocení dob pojištění evidovaných {'@'}ČSSZ{'@'} vyplývá, že
+jste dosud nezískal/a alespoň 35 let pojištění
+potřebného pro nárok na starobní důchod a tuto dobu
+pravděpodobně nezískáte ani k datu dosažení svého
+důchodového věku. Nárok na starobní důchod však můžete
+získat také ode dne
+<strong class="text-nowrap">{value}</strong
+>, pokud získáte ještě
+<strong class="text-nowrap">{value2}</strong>
+pojištění a nebo
+<strong class="text-nowrap">{value3}</strong>
+bez náhradních dob pojištění (tj. bez doby evidence na
+ÚP, studia, péče o dítě/osobu závislou, vojenské nebo
+civilní služby, pobírání invalidního důchodu pro
+invaliditu třetího stupně).`,
+
+resultType21: `Ke dni {text} jste
+nedosáhl/a důchodového věku a nejsou ani splněny
+podmínky pro nárok na starobní důchod. Z provedeného
+vyhodnocení dob pojištění evidovaných {'@'}ČSSZ{'@'} vyplývá, že
+jste dosud nezískal/a potřebnou dobu pojištění pro nárok
+na starobní důchod a tuto dobu pravděpodobně nezískáte
+ani k datu dosažení svého důchodového věku. Nárok na
+starobní důchod však můžete získat také ode dne
+<strong class="text-nowrap">{value}</strong
+>, pokud získáte ještě
+<strong class="text-nowrap">{value2}</strong>
+pojištění a nebo
+<strong class="text-nowrap">{value3}</strong>
+bez náhradních dob pojištění (tj. bez doby evidence na
+ÚP, studia, péče o dítě/osobu závislou, vojenské nebo
+civilní služby, pobírání invalidního důchodu pro
+invaliditu třetího stupně).`,
+
+resultType22: `Ke dni {text} jste
+nedosáhl/a důchodového věku a nejsou ani splněny
+podmínky pro nárok na starobní důchod. Z provedeného
+vyhodnocení dob pojištění evidovaných {'@'}ČSSZ{'@'} vyplývá, že
+jste dosud nezískal/a alespoň 35 let pojištění
+potřebného pro nárok na starobní důchod a tuto dobu
+pravděpodobně nezískáte ani k datu dosažení svého
+důchodového věku. Nárok na starobní důchod však můžete
+získat také ode dne
+<strong class="text-nowrap">{value}</strong
+>, pokud získáte ještě
+<strong class="text-nowrap">{value2}</strong>
+pojištění.`,
+
+resultType23: `Ke dni {text} jste
+nedosáhl/a důchodového věku a nejsou ani splněny
+podmínky pro nárok na starobní důchod. Z provedeného
+vyhodnocení dob pojištění evidovaných {'@'}ČSSZ{'@'} vyplývá, že
+jste dosud nezískal/a potřebnou dobu pojištění pro nárok
+na starobní důchod a tuto dobu pravděpodobně nezískáte
+ani k datu dosažení svého důchodového věku. Nárok na
+starobní důchod však můžete získat také ode dne
+<strong class="text-nowrap">{value}</strong
+>, pokud získáte ještě
+<strong class="text-nowrap">{value2}</strong>
+pojištění.`,
+informativeEstimateDescription: `Pokud si přejete vypočítat odhad výše starobního důchodu k jinému datu, změňte
+v žádosti o důchod datum požadovaného přiznání starobního důchodu.`,
+informativeEstimateNone: `Informativní odhad výše starobního důchodu nelze vypočítat.`,
+informativeEstimateOldAge: `Informativní odhad výše řádného starobního důchodu k {text} (k datu vzniku nároku)`,
+informativeEstimatePremature: `Informativní odhad předčasného starobního důchodu s datem přiznání k {text}`,
+informativeEstimateAfterClaim: `Informativní odhad výše řádného starobního důchodu k {text} (k datu po nároku)`,
+panels: [
+{
+header: "Datum  vzniku nároku na starobní důchod",
+description: `Datum vzniku nároku na starobní důchod je dnem,
+kdy jsou splněny podmínky získání potřebné doby pojištění
+a dosažení stanoveného věku. Více informací o podmínkách
+nároku na důchod naleznete na
+<a target="_blank" href="{link}">stránkách ČSSZ.</a>`,
+},
+{
+header: "Datum dosažení důchodového věku",
+description: `Datum dosažení důchodového věku je dnem, kdy je splněna podmínka
+dosažení stanoveného důchodového věku. Důchodový věk je ovlivněn rokem
+narození a u žen navíc počtem vychovaných dětí.
+Více informací o podmínkách dosažení důchodového věku naleznete na
+<a target="_blank" href="{link}">stránkách ČSSZ.</a>`,
+},
+{
+header: "Datum dosažení důchodového věku pro předčasný důchod",
+description: `Datum dosažení důchodového věku pro předčasný důchod je dnem,
+kdy je splněna podmínka dosažení stanoveného důchodového věku pro
+předčasný důchod. Důchodový věk je ovlivněn rokem narození a u žen
+navíc počtem vychovaných dětí. Více informací o podmínce dosažení
+důchodového věku naleznete na
+<a target="_blank" href="{link}">stránkách ČSSZ.</a>`,
+},
+{
+header: "Celkový počet získaných roků a dnů pojištění",
+description: `z toho náhradní doba pojištění {text}`,
+},
+],
+detailsList: [
+{
+text: "Osobní vyměřovací základ",
+hint: `Osobní vyměřovací základ představuje průměrný měsíční příjem,
+kterého jste dosáhl/a v rozhodném období roků 1986 – 2022, přičemž
+příjmy za jednotlivé roky byly upraveny koeficientem zohledňujícím
+nárůst průměrné mzdy, tak aby byly příjmy v minulosti vyrovnány
+na současnou úroveň.`,
+},
+{
+text: "Výpočtový základ",
+hint: `Jedná se o osobní vyměřovací základ (OVZ) upravený podle aktuálně
+platných redukčních hranic. OVZ do první redukční hranice (17 743 Kč) se
+započte v rozsahu 100 %, nad první redukční hranici do druhé redukční
+hranice (161 296 Kč) se započte v rozsahu 26 %. Nad druhou redukční
+hranici se OVZ nezapočítává.`,
+},
+{
+text: "Procentní výměra odhadovaného důchodu",
+hint: `Zohledňují se Vaše doby pojištění (včetně výdělků a vyloučených dob)
+získané do data požadovaného přiznání důchodu. Procentní výměra odhadovaného
+důchodu může být zvýšena o výchovné za každé dítě, které žadatel vychoval.`,
+},
+{
+text: "Základní výměra",
+hint: `Základní výměra je pevně stanovena zákonem jako 10 % průměrné mzdy pro aktuální rok`,
+},
+{
+text: "Odhadovaná výše důchodu",
+hint: `Součet procentní a základní výměry zaokrouhlený na celé stokoruny.`,
+},
+],
+childrenListTitle: `Seznam vychovaných dětí pro stanovení důchodového věku`,
+childrenCount: `Počet vychovaných dětí:`,
+childrenHistHint: `Dítě se podle ust. § 32 odst. 4 zák. č. 155/1995 Sb. považuje za
+vychované, jestliže žena osobně pečuje nebo pečovala o dítě v
+době od narození dítěte do jeho zletilosti alespoň po dobu 10
+roků. Pokud se žena ujala výchovy dítěte po dosažení osmého roku
+jeho věku, je podmínka výchovy dítěte splněna, jestliže žena
+osobně pečuje nebo pečovala o dítě do dosažení zletilosti aspoň
+po dobu 5 roků; to však neplatí, pokud žena před dosažením
+zletilosti dítěte přestala o dítě pečovat. Podmínka výchovy
+dítěte se považuje rovněž za splněnou, pokud dítě zemřelo po
+dosažení 5 let věku a žena o dítě osobně pečovala od jeho
+narození do jeho úmrtí.`,
+displayingRegisteredChildren: `Zobrazují se děti, které jsou u Vás registrovány v agendovém
+systému evidence obyvatel ČR.`,
+displayedChildrenHint: `Počet vychovaných dětí pro stanovení důchodového věku je možné
+upravit v oddílu <strong>{text}</strong>. Přidání či odebrání
+dítěte v tomto oddílu může mít vliv na informativní vyhodnocení
+Vašeho důchodového věku a tím i na vznik nároku na starobní
+důchod.`,
+},
+},
+}
