@@ -25,6 +25,10 @@ fn get_input(source: String) -> String{
 
 fn parse_string(input: &Value) -> String {
     let value = str::replace(&input.as_str().unwrap().to_owned(), "\n", "");
+    let value = str::replace(&value, "\r", "");
+    let value = str::replace(&value, "﻿", "");
+    // let value = str::replace(&value, "\ufeff", "");
+
     let re = Regex::new(r"\s+").unwrap();
     let res = re.replace_all(&*value, " ").to_string();
     return res;
@@ -42,7 +46,6 @@ fn get_object_keys(data: &Value, prepend: String) -> Vec<Mutation> {
         };
 
         if value.is_string() {
-            // let parsed_value = str::replace(&*value.as_str().unwrap().to_owned(), "\n", "");
             current_scope_values.push(Mutation { key, cs: parse_string(value)})
         } else if value.is_object() {
             current_scope_values.extend(get_object_keys(value, key))
@@ -130,7 +133,7 @@ fn generate_json(data: Vec<Mutation>, path: String) {
             Some(index) => {
                 let split = keys.split_at(index);
                 path_keys = Vec::from(split.0);
-                println!("Path keys {:?}", path_keys);
+                // println!("Path keys {:?}", path_keys);
                 let array_keys = Vec::from(split.1);
                 let last_array_key = array_keys.last().expect("Kurva co to je");
 
@@ -148,30 +151,43 @@ fn generate_json(data: Vec<Mutation>, path: String) {
                 match current_map.get(&*json_key) {
                     Some(value) => {
                         let mut current_items = value.as_array().unwrap().to_owned();
-                        println!("current items {:?}", current_items);
                         let index: usize =  array_keys[1].parse().unwrap();
 
                         if current_items.len() > index {
                             let mut found_object = current_items[index].to_owned();
-                            merge(&mut found_object, json!({last_array_key.to_string(): mutation.cs}));
+                            merge(&mut found_object, json!({last_array_key.to_string(): parse_string(&Value::String(mutation.cs))}));
                             let new_json = found_object;
-                            // TODO hm?
-                            if current_items.len() >= 1 {
-                                current_items.pop();
-                            }
 
-                            current_items.push(new_json);
-                            // current_map
-                            current_map.insert(json_key, Value::Array(current_items));
-                            // We have the object
+                            current_items[index] = new_json;
                         } else {
-                            println!("isnt object");
-                            current_items.push(json!({last_array_key.to_string(): mutation.cs}));
-                            current_map.insert(json_key, Value::Array(current_items));
+                            // index is bigger than length but there is something already
+                            if current_items.len() > 0 {
+                                let delta = index - current_items.len();
+
+                                for i in 0..(delta + 1) {
+                                    current_items.push(json!({}));
+                                }
+                                current_items[index] = json!({last_array_key.to_string(): parse_string(&Value::String(mutation.cs))});
+                            } else {
+                                for i in 0..(index + 1) {
+                                    current_items.push(json!({}));
+                                }
+                                // println!("isnt object");
+                                current_items[index] = json!({last_array_key.to_string(): parse_string(&Value::String(mutation.cs))});
+                            }
                         }
+
+                        current_map.insert(json_key, Value::Array(current_items));
                     },
                     None => {
-                        current_map.insert(json_key, Value::Array(vec![json!({last_array_key.to_string(): mutation.cs})]));
+                        let mut current_items = Vec::new();
+                        let index: usize =  array_keys[1].parse().unwrap();
+                        for i in 0..(index + 1) {
+                            current_items.push(json!({}));
+                        }
+
+                        current_items[index] = json!({last_array_key.to_string(): parse_string(&Value::String(mutation.cs))});
+                        current_map.insert(json_key, Value::Array(current_items));
                     }
                 }
 
@@ -185,7 +201,7 @@ fn generate_json(data: Vec<Mutation>, path: String) {
                         .expect("neco se do*ebalo a nemuze to najit object");
                 }
 
-                current_map.insert(last_key.to_string(), Value::String(mutation.cs));
+                current_map.insert(last_key.to_string(), Value::String(parse_string(&Value::String(mutation.cs))));
             },
         };
         // println!("We are parsing an array");
