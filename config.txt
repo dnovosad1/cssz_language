@@ -1,4 +1,4 @@
-type
-source
-result
+csv_to_json
+/home/gandalfthegray/language/src/core_result.csv
+/home/gandalfthegray/language/core_result.json
 

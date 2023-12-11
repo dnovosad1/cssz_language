@@ -4,6 +4,9 @@ use csv::{Reader, Writer};
 use serde_json::{json, Map, Result, Value};
 use serde::Deserialize;
 use regex::Regex;
+use std::io::prelude::*;
+use std::io::BufReader;
+
 
 #[derive(Debug, Deserialize)]
 struct Mutation {
@@ -11,8 +14,8 @@ struct Mutation {
     cs: String
 }
 
-fn get_input() -> String{
-    let mut file = File::open("/home/gandalfthegray/language/src/input.json").expect("Failed to open file");
+fn get_input(source: String) -> String{
+    let mut file = File::open(source).expect("Failed to open file");
 
     // Read the JSON data into a String
     let mut json_str = String::new();
@@ -59,8 +62,8 @@ fn get_object_keys(data: &Value, prepend: String) -> Vec<Mutation> {
     current_scope_values
 }
 
-fn write_result(data: Vec<Mutation>) -> Result<()> {
-    let mut wtr = Writer::from_path("/home/gandalfthegray/language/src/result.csv").unwrap();
+fn write_result(data: Vec<Mutation>, path: String) -> Result<()> {
+    let mut wtr = Writer::from_path(path).unwrap();
     wtr.write_record(&["key", "cs", "en"]).unwrap();
 
     for line in data.into_iter() {
@@ -71,8 +74,8 @@ fn write_result(data: Vec<Mutation>) -> Result<()> {
     Ok(())
 }
 
-fn read_csv() -> Vec<Mutation> {
-    let file = File::open("/home/gandalfthegray/language/src/result.csv").expect("Failed to open CSV file");
+fn read_csv(path: String) -> Vec<Mutation> {
+    let file = File::open(path).expect("Failed to open CSV file");
 
     let mut csv_reader = Reader::from_reader(file);
     let mut mutations: Vec<Mutation> = Vec::new();
@@ -80,7 +83,9 @@ fn read_csv() -> Vec<Mutation> {
     for result in csv_reader.deserialize::<Mutation>() {
         match result {
             Ok(record) => {
-                mutations.push(record);
+                if !record.cs.is_empty() {
+                    mutations.push(record);
+                }
             }
             Err(err) => {
                 eprintln!("Error reading CSV record: {}", err);
@@ -110,7 +115,7 @@ fn merge(a: &mut Value, b: Value) {
     *a = b;
 }
 
-fn generate_json(data: Vec<Mutation>) {
+fn generate_json(data: Vec<Mutation>, path: String) {
     let mut json_object = Map::new();
 
     for mutation in data {
@@ -187,7 +192,7 @@ fn generate_json(data: Vec<Mutation>) {
 
     }
 
-    let mut file = File::create("/home/gandalfthegray/language/src/output.json").expect("Failed to create file");
+    let mut file = File::create(path).expect("Failed to create file");
 
     // Serialize the JSON object to a JSON string
     let json_string = serde_json::to_string_pretty(&Value::Object(json_object))
@@ -198,10 +203,52 @@ fn generate_json(data: Vec<Mutation>) {
         .expect("jak expectuju tak expectuju nepada to");
 }
 
-fn main(){
-    let v: Value = serde_json::from_str(&get_input()).unwrap();
+fn get_config() -> (String, String, String) {
+    let file = File::open("config.txt");
 
-    let res =  get_object_keys(&v, String::from(""));
-    let _ = write_result(res);
-    generate_json(read_csv());
+    let file = match file {
+        Ok(file) => file,
+        Err(error) => {
+            panic!("Problem opening the file: {:?}", error)
+        },
+    };
+
+    let reader = BufReader::new(file);
+
+    let mut mode = String::new();
+    let mut source = String::new();
+    let mut result = String::new();
+
+    let mut i = 0;
+
+    for line in reader.lines() {
+        match line {
+            Ok(line) => {
+                if i == 0 {
+                    mode = line;
+                } else if i == 1 {
+                    source = line;
+                } else if i == 2 {
+                    result = line
+                }
+                i = i + 1;
+            },
+            Err(error) => panic!("Problem reading the file: {:?}", error),
+        }
+    }
+
+    (mode, source, result)
+}
+
+fn main(){
+    let (mode, source, result) = get_config();
+
+    if mode == String::from("json_to_csv") {
+        let v: Value = serde_json::from_str(&get_input(source)).unwrap();
+
+        let res =  get_object_keys(&v, String::from(""));
+        let _ = write_result(res, result);
+    } else if mode == String::from("csv_to_json"){
+        generate_json(read_csv(source), result);
+    }
 }
