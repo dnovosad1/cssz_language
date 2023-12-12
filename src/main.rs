@@ -6,12 +6,14 @@ use serde::Deserialize;
 use regex::Regex;
 use std::io::prelude::*;
 use std::io::BufReader;
+use itertools::Itertools;
+use std::collections::HashMap;
 
 
 #[derive(Debug, Deserialize)]
 struct Mutation {
     key: String,
-    cs: String
+    value: String,
 }
 
 fn get_input(source: String) -> String{
@@ -57,7 +59,7 @@ fn get_object_keys(data: &Value, prepend: String) -> Vec<Mutation> {
         };
 
         if value.is_string() {
-            current_scope_values.push(Mutation { key, cs: parse_value(value)})
+            current_scope_values.push(Mutation { key, value: parse_value(value)})
         } else if value.is_object() {
             current_scope_values.extend(get_object_keys(value, key))
         } else if value.is_array(){
@@ -67,7 +69,7 @@ fn get_object_keys(data: &Value, prepend: String) -> Vec<Mutation> {
                 for (key_j, value) in line.as_object().unwrap() {
                     // index is used to correctly parse from csv to json
                     let array_key = format!("{key}.$.{index}.{key_j}");
-                    current_scope_values.push(Mutation { key:  array_key, cs: parse_value(value) });
+                    current_scope_values.push(Mutation { key:  array_key, value: parse_value(value) });
                 }
                 index += 1;
             }
@@ -82,7 +84,7 @@ fn write_result(data: Vec<Mutation>, path: String) -> Result<()> {
     wtr.write_record(&["key", "cs", "en"]).unwrap();
 
     for line in data.into_iter() {
-        wtr.write_record(&[line.key, line.cs, String::from("")]).unwrap();
+        wtr.write_record(&[line.key, line.value, String::from("")]).unwrap();
     }
 
     wtr.flush().unwrap();
@@ -99,7 +101,7 @@ fn read_csv(path: String) -> Vec<Mutation> {
         match result {
             Ok(record) => {
                 // Don't transform empty lines in csv, so that i18n shows them as keys or fallback language
-                if !record.cs.is_empty() {
+                if !record.value.is_empty() {
                     mutations.push(record);
                 }
             }
@@ -167,7 +169,7 @@ fn generate_json(data: Vec<Mutation>, path: String) {
 
                         if current_items.len() > index {
                             let mut found_object = current_items[index].to_owned();
-                            merge(&mut found_object, json!({last_array_key.to_string(): parse_string(mutation.cs)}));
+                            merge(&mut found_object, json!({last_array_key.to_string(): parse_string(mutation.value)}));
                             let new_json = found_object;
 
                             current_items[index] = new_json;
@@ -179,13 +181,13 @@ fn generate_json(data: Vec<Mutation>, path: String) {
                                 for i in 0..(delta + 1) {
                                     current_items.push(json!({}));
                                 }
-                                current_items[index] = json!({last_array_key.to_string(): parse_string(mutation.cs)});
+                                current_items[index] = json!({last_array_key.to_string(): parse_string(mutation.value)});
                             } else {
                                 for i in 0..(index + 1) {
                                     current_items.push(json!({}));
                                 }
                                 // println!("isnt object");
-                                current_items[index] = json!({last_array_key.to_string(): parse_string(mutation.cs)});
+                                current_items[index] = json!({last_array_key.to_string(): parse_string(mutation.value)});
                             }
                         }
 
@@ -198,7 +200,7 @@ fn generate_json(data: Vec<Mutation>, path: String) {
                             current_items.push(json!({}));
                         }
 
-                        current_items[index] = json!({last_array_key.to_string(): parse_string(mutation.cs)});
+                        current_items[index] = json!({last_array_key.to_string(): parse_string(mutation.value)});
                         current_map.insert(json_key, Value::Array(current_items));
                     }
                 }
@@ -214,7 +216,7 @@ fn generate_json(data: Vec<Mutation>, path: String) {
                         .expect("neco se do*ebalo a nemuze to najit object");
                 }
 
-                current_map.insert(last_key.to_string(), Value::String(parse_string(mutation.cs)));
+                current_map.insert(last_key.to_string(), Value::String(parse_string(mutation.value)));
             },
         };
 
@@ -268,14 +270,42 @@ fn get_config() -> (String, String, String) {
     (mode, source, result)
 }
 
+#[derive(Debug, Deserialize)]
+struct MutationMerge {
+    cs: String,
+    en: String
+}
+
+
+struct MutationToWrite {
+    key: String,
+    cs: String,
+    en: String,
+}
+
 fn main(){
     let (mode, source, result) = get_config();
 
     if mode == String::from("json_to_csv") {
-        let v: Value = serde_json::from_str(&get_input(source)).unwrap();
+        let v_cs: Value = serde_json::from_str(&get_input(source)).unwrap();
+        let v_en: Value = serde_json::from_str(&get_input(String::new())).unwrap();
 
-        let res =  get_object_keys(&v, String::from(""));
-        let _ = write_result(res, result);
+
+        let res_cs =  get_object_keys(&v_cs, String::from(""));
+        let res_en =  get_object_keys(&v_en, String::from(""));
+        let mut mutations = HashMap::<String, MutationMerge>::new();
+
+        for line in res_cs {
+            mutations.insert(line.key, MutationMerge { cs: line.value, en: String::new()})
+        }
+
+        for line in res_en {
+            let found = mutations.get(&line.key).unwrap();
+            mutations.insert(line.key, MutationMerge {cs: found.to_owned().cs.to_string(), en: line.value})
+        }
+
+        let sorted = mutations.iter().sorted();
+        // let _ = write_result(res, result);
     } else if mode == String::from("csv_to_json"){
         generate_json(read_csv(source), result);
     }
