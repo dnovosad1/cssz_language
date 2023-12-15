@@ -6,7 +6,6 @@ use serde::Deserialize;
 use regex::Regex;
 use std::io::prelude::*;
 use std::io::BufReader;
-use itertools::Itertools;
 use std::collections::HashMap;
 
 
@@ -79,30 +78,34 @@ fn get_object_keys(data: &Value, prepend: String) -> Vec<Mutation> {
     current_scope_values
 }
 
-fn write_result(data: Vec<Mutation>, path: String) -> Result<()> {
+fn write_result(data: Vec<MutationToWrite>, path: String) -> Result<()> {
     let mut wtr = Writer::from_path(path).unwrap();
     wtr.write_record(&["key", "cs", "en"]).unwrap();
 
     for line in data.into_iter() {
-        wtr.write_record(&[line.key, line.value, String::from("")]).unwrap();
+        wtr.write_record(&[line.key, line.cs, line.en]).unwrap();
     }
 
     wtr.flush().unwrap();
     Ok(())
 }
 
-fn read_csv(path: String) -> Vec<Mutation> {
+fn read_csv(path: String) -> (Vec<Mutation>, Vec<Mutation>) {
     let file = File::open(path).expect("Failed to open CSV file");
 
     let mut csv_reader = Reader::from_reader(file);
-    let mut mutations: Vec<Mutation> = Vec::new();
+    let mut mutations_en: Vec<Mutation> = Vec::new();
+    let mut mutations_cs: Vec<Mutation> = Vec::new();
 
-    for result in csv_reader.deserialize::<Mutation>() {
+    for result in csv_reader.deserialize::<MutationToWrite>() {
         match result {
             Ok(record) => {
-                // Don't transform empty lines in csv, so that i18n shows them as keys or fallback language
-                if !record.value.is_empty() {
-                    mutations.push(record);
+                if !record.cs.is_empty(){
+                    mutations_cs.push(Mutation { key: record.key.to_owned(), value: record.cs})
+                }
+
+                if !record.en.is_empty() {
+                    mutations_en.push(Mutation { key: record.key, value: record.en})
                 }
             }
             Err(err) => {
@@ -111,7 +114,7 @@ fn read_csv(path: String) -> Vec<Mutation> {
         }
     }
 
-    mutations
+    (mutations_cs, mutations_en)
 }
 
 // Used for merging objects in arrays
@@ -142,21 +145,21 @@ fn generate_json(data: Vec<Mutation>, path: String) {
 
         let keys: Vec<&str> = mutation.key.split('.').collect();
         let mut path_keys: Vec<&str> = Vec::new();
-        let last_key = keys.last().expect("prazdny path kur*a");
+        let last_key = keys.last().expect("Invalid keys");
 
         match keys.iter().position(|&x| x == "$") {
             Some(index) => {
                 let split = keys.split_at(index);
                 path_keys = Vec::from(split.0);
                 let array_keys = Vec::from(split.1);
-                let last_array_key = array_keys.last().expect("Kurva co to je");
+                let last_array_key = array_keys.last().expect("Invalid keys");
 
                 for key in path_keys.iter().take(path_keys.len() - 1) {
                     current_map = current_map
                         .entry(key.to_string())
                         .or_insert_with(|| Value::Object(Map::new()))
                         .as_object_mut()
-                        .expect("neco se do*ebalo a nemuze to najit object");
+                        .expect("Object creation failed");
                 }
 
                 let json_key = path_keys.last().expect("").parse::<String>().unwrap();
@@ -213,7 +216,7 @@ fn generate_json(data: Vec<Mutation>, path: String) {
                         .entry(key.to_string())
                         .or_insert_with(|| Value::Object(Map::new()))
                         .as_object_mut()
-                        .expect("neco se do*ebalo a nemuze to najit object");
+                        .expect("Failed object creation");
                 }
 
                 current_map.insert(last_key.to_string(), Value::String(parse_string(mutation.value)));
@@ -226,14 +229,14 @@ fn generate_json(data: Vec<Mutation>, path: String) {
 
     // Serialize the JSON object to a JSON string
     let json_string = serde_json::to_string_pretty(&Value::Object(json_object))
-        .expect("serializace neprobehla");
+        .expect("Formatting json failed");
 
     // Write the JSON string to the file
     file.write_all(json_string.as_bytes())
-        .expect("jak expectuju tak expectuju nepada to");
+        .expect("Writing json failed");
 }
 
-fn get_config() -> (String, String, String) {
+fn get_config() -> (String, String, String, String) {
     let file = File::open("config.txt");
 
     let file = match file {
@@ -247,7 +250,8 @@ fn get_config() -> (String, String, String) {
 
     let mut mode = String::new();
     let mut source = String::new();
-    let mut result = String::new();
+    let mut result_1 = String::new();
+    let mut result_2 = String::new();
 
     let mut i = 0;
 
@@ -259,7 +263,9 @@ fn get_config() -> (String, String, String) {
                 } else if i == 1 {
                     source = line;
                 } else if i == 2 {
-                    result = line
+                    result_1 = line
+                } else if i == 3 {
+                    result_2 = line
                 }
                 i = i + 1;
             },
@@ -267,7 +273,7 @@ fn get_config() -> (String, String, String) {
         }
     }
 
-    (mode, source, result)
+    (mode, source, result_1, result_2)
 }
 
 #[derive(Debug, Deserialize)]
@@ -277,6 +283,7 @@ struct MutationMerge {
 }
 
 
+#[derive(Debug, Deserialize, Clone)]
 struct MutationToWrite {
     key: String,
     cs: String,
@@ -284,29 +291,39 @@ struct MutationToWrite {
 }
 
 fn main(){
-    let (mode, source, result) = get_config();
+    let (mode, source, result_1, result_2) = get_config();
 
     if mode == String::from("json_to_csv") {
-        let v_cs: Value = serde_json::from_str(&get_input(source)).unwrap();
-        let v_en: Value = serde_json::from_str(&get_input(String::new())).unwrap();
+        let source_json: Value = serde_json::from_str(&get_input(source)).unwrap();
+        let v_cs: Value = source_json["cs"].clone();
+        let v_en: Value = source_json["en"].clone();
 
 
         let res_cs =  get_object_keys(&v_cs, String::from(""));
         let res_en =  get_object_keys(&v_en, String::from(""));
-        let mut mutations = HashMap::<String, MutationMerge>::new();
+        let mut mutations = HashMap::<String, MutationToWrite>::new();
 
         for line in res_cs {
-            mutations.insert(line.key, MutationMerge { cs: line.value, en: String::new()})
+            mutations.insert(line.key.clone(), MutationToWrite { key: line.key, cs: line.value, en: String::new()});
         }
 
         for line in res_en {
             let found = mutations.get(&line.key).unwrap();
-            mutations.insert(line.key, MutationMerge {cs: found.to_owned().cs.to_string(), en: line.value})
+            mutations.insert(line.key.clone(), MutationToWrite {key: line.key, cs: found.to_owned().cs.to_string(), en: line.value});
         }
 
-        let sorted = mutations.iter().sorted();
-        // let _ = write_result(res, result);
+        let sorted = mutations.iter();
+        let mut final_mutations: Vec<MutationToWrite> = Vec::new();
+
+        for (key, value) in sorted {
+            let owned = value.to_owned();
+            final_mutations.push(owned)
+        }
+
+        let _ = write_result(final_mutations, result_1);
     } else if mode == String::from("csv_to_json"){
-        generate_json(read_csv(source), result);
+        let (mutations_cs, mutations_en) = read_csv(source);
+        generate_json(mutations_cs, result_1);
+        generate_json(mutations_en, result_2);
     }
 }

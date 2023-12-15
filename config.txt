@@ -1,4 +1,5 @@
 csv_to_json
-/home/gandalfthegray/language/src/core_result.csv
-/home/gandalfthegray/language/core_result.json
+/home/gandalfthegray/language/res_multi.csv
+/home/gandalfthegray/language/res_cs_one.json
+/home/gandalfthegray/language/res_en_one.json
 
