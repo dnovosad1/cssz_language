@@ -1,5 +1,6 @@
 csv_to_json
-/home/gandalfthegray/language/res_multi.csv
-/home/gandalfthegray/language/res_cs_one.json
-/home/gandalfthegray/language/res_en_one.json
+C:\Users\DominikNovosad\Downloads\pes.csv
+C:\Users\DominikNovosad\Downloads\psovod_cs.json
+C:\Users\DominikNovosad\Downloads\psovod_en.json
+
 
