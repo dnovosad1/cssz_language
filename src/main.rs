@@ -308,8 +308,14 @@ fn main(){
         }
 
         for line in res_en {
-            let found = mutations.get(&line.key).unwrap();
-            mutations.insert(line.key.clone(), MutationToWrite {key: line.key, cs: found.to_owned().cs.to_string(), en: line.value});
+            match mutations.get(&line.key) {
+                Some(found) => {
+                    mutations.insert(line.key.clone(), MutationToWrite {key: line.key, cs: found.to_owned().cs.to_string(), en: line.value});
+                },
+                None => {
+                    mutations.insert(line.key.clone(), MutationToWrite{key: line.key, cs: String::from(""), en: line.value});
+                }
+            }
         }
 
         let sorted = mutations.iter();
